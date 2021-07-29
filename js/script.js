@@ -20,16 +20,17 @@ const waypoint = window.screen.availHeight,
         ? navBox.classList.add("nav-bg-fill")
         : navBox.classList.remove("nav-bg-fill");
     });
-const themeBtn = document.getElementById("theme-switch");
+const themeBtn = document.getElementById("js-theme-switch");
 themeBtn.addEventListener("click", () => {
   if (document.documentElement.classList.contains("dark")) {
     document.documentElement.style.setProperty("--bg", "#fff"),
       document.documentElement.style.setProperty("--bg-2", "#fff"),
       document.documentElement.style.setProperty("--text", "#000"),
       document.documentElement.style.setProperty("--input", "#fff"),
-      (document.querySelector(".project-1").src = "./assets/portfolio.png"),
-      (document.querySelector(".project-2").src = "./assets/natours.png"),
-      (document.querySelector(".project-3").src = "./assets/noticeboard.png"),
+      (document.querySelector(".js-project-1").src = "./assets/portfolio.png"),
+      (document.querySelector(".js-project-2").src = "./assets/natours.png"),
+      (document.querySelector(".js-project-3").src =
+        "./assets/noticeboard.png"),
       localStorage.setItem("theme", "light"),
       console.log(localStorage.getItem("dark"));
     document.documentElement.classList.remove("dark");
@@ -38,18 +39,19 @@ themeBtn.addEventListener("click", () => {
       document.documentElement.style.setProperty("--bg-2", "#0f0f0f"),
       document.documentElement.style.setProperty("--text", "#fff"),
       document.documentElement.style.setProperty("--input", "#151515"),
-      (document.querySelector(".project-1").src =
+      (document.querySelector(".js-project-1").src =
         "./assets/portfolio-dark.jpg"),
-      (document.querySelector(".project-2").src = "./assets/natours-dark.jpg"),
-      (document.querySelector(".project-3").src =
+      (document.querySelector(".js-project-2").src =
+        "./assets/natours-dark.jpg"),
+      (document.querySelector(".js-project-3").src =
         "./assets/noticeboard-dark.jpg"),
       localStorage.setItem("theme", "dark"),
       document.documentElement.classList.add("dark");
   }
 });
-const projectList = document.querySelector(".project-showcase-div"),
-  projectInfo = document.querySelector(".project-info-div"),
-  projectBack = document.querySelector(".project-info-back"),
+const projectList = document.querySelector(".js-project-list"),
+  projectInfo = document.querySelector(".js-project-info-div"),
+  projectBack = document.querySelector(".js-project-back"),
   projectData = [
     {
       name: "Portfolio",
@@ -88,23 +90,30 @@ const projectList = document.querySelector(".project-showcase-div"),
     },
   ];
 
-document.getElementById("portfolio-1").addEventListener("click", () => {
+document.getElementById("js-portfolio-1").addEventListener("click", () => {
   displayProject(0);
 });
 
-document.getElementById("portfolio-2").addEventListener("click", () => {
+document.getElementById("js-portfolio-2").addEventListener("click", () => {
   displayProject(1);
 });
 
-document.getElementById("portfolio-3").addEventListener("click", () => {
+document.getElementById("js-portfolio-3").addEventListener("click", () => {
   displayProject(2);
 });
 function displayProject(e) {
   document.documentElement.classList.contains("dark")
-    ? ((document.getElementById("project-p1").innerText = projectData[e].p1),
-      (document.getElementById("project-p2").innerText = projectData[e].p2),
-      (document.getElementById("project-img").src = projectDataDark[e].img),
-      (document.getElementById("project-name").innerText = projectData[e].name),
+    ? ((document.getElementById("js-project-p1").innerText = projectData[e].p1),
+      (document.getElementById("js-project-p2").innerText = projectData[e].p2),
+      (document.getElementById("js-project-img").src = projectDataDark[e].img),
+      (document.getElementById("js-project-name").innerText =
+        projectData[e].name),
+      document
+        .getElementById("js-project-visit")
+        .setAttribute("href", projectData[e].visit),
+      document
+        .getElementById("js-project-code")
+        .setAttribute("href", projectData[e].code),
       (projectList.style.opacity = 0),
       setTimeout(() => {
         (projectList.style.display = "none"),
@@ -113,10 +122,17 @@ function displayProject(e) {
       setTimeout(() => {
         projectInfo.style.opacity = 100;
       }, 400))
-    : ((document.getElementById("project-p1").innerText = projectData[e].p1),
-      (document.getElementById("project-p2").innerText = projectData[e].p2),
-      (document.getElementById("project-img").src = projectData[e].img),
-      (document.getElementById("project-name").innerText = projectData[e].name),
+    : ((document.getElementById("js-project-p1").innerText = projectData[e].p1),
+      (document.getElementById("js-project-p2").innerText = projectData[e].p2),
+      (document.getElementById("js-project-img").src = projectData[e].img),
+      (document.getElementById("js-project-name").innerText =
+        projectData[e].name),
+      document
+        .getElementById("js-project-visit")
+        .setAttribute("href", projectData[e].visit),
+      document
+        .getElementById("js-project-code")
+        .setAttribute("href", projectData[e].code),
       (projectList.style.opacity = 0),
       setTimeout(() => {
         (projectList.style.display = "none"),
@@ -127,8 +143,8 @@ function displayProject(e) {
       }, 400));
 }
 projectBack.addEventListener("click", () => {
-  const e = document.querySelector(".project-info-div");
-  (document.getElementById("project-name").innerText = "Portfolio"),
+  const e = document.querySelector(".js-project-info-div");
+  (document.getElementById("js-project-name").innerText = "Portfolio"),
     (e.style.opacity = 0),
     setTimeout(() => {
       (e.style.display = "none"), (projectList.style.display = "block");
@@ -138,68 +154,72 @@ projectBack.addEventListener("click", () => {
     }, 400);
 });
 let os = new OnScreen({ tolerance: 175 });
-os.on("enter", ".services-heading", (e, t) => {
+os.on("enter", ".js-services-heading", (e, t) => {
   e.classList.add("heading-2-animate-left"),
-    document.getElementById("services-hr").classList.add("hr-animate");
+    document.getElementById("js-services-hr").classList.add("hr-animate");
 }),
-  os.on("enter", ".portfolio-heading", (e, t) => {
+  os.on("enter", ".js-portfolio-heading", (e, t) => {
     e.classList.add("heading-2-animate-right"),
-      document.getElementById("portfolio-hr").classList.add("hr-animate");
+      document.getElementById("js-portfolio-hr").classList.add("hr-animate");
   }),
-  os.on("enter", ".contact-heading", (e, t) => {
+  os.on("enter", ".js-contact-heading", (e, t) => {
     e.classList.add("heading-2-animate-left"),
-      document.getElementById("contact-hr").classList.add("hr-animate");
+      document.getElementById("js-contact-hr").classList.add("hr-animate");
   }),
-  os.on("enter", ".services-bg-1", (e, t) => {
+  os.on("enter", ".js-services-bg-1", (e, t) => {
     e.classList.add("services-bg-left-animate"),
-      document.querySelector(".services-1").classList.add("services-fade-left");
+      document
+        .querySelector(".js-services-1")
+        .classList.add("services-fade-left");
   }),
-  os.on("enter", ".services-bg-2", (e, t) => {
+  os.on("enter", ".js-services-bg-2", (e, t) => {
     e.classList.add("services-bg-right-animate"),
       document
-        .querySelector(".services-2")
+        .querySelector(".js-services-2")
         .classList.add("services-fade-right");
   }),
-  os.on("enter", ".services-bg-3", (e, t) => {
+  os.on("enter", ".js-services-bg-3", (e, t) => {
     e.classList.add("services-bg-left-animate"),
-      document.querySelector(".services-3").classList.add("services-fade-left");
+      document
+        .querySelector(".js-services-3")
+        .classList.add("services-fade-left");
   }),
-  os.on("enter", ".services-bg-4", (e, t) => {
+  os.on("enter", ".js-services-bg-4", (e, t) => {
     e.classList.add("services-bg-right-animate"),
       document
-        .querySelector(".services-4")
+        .querySelector(".js-services-4")
         .classList.add("services-fade-right");
   }),
-  os.on("enter", ".project-1", (e, t) => {
+  os.on("enter", ".js-project-1", (e, t) => {
     e.classList.add("project-1-animate"),
       document
-        .getElementById("project-1-title")
+        .getElementById("js-project-1-title")
         .classList.add("project-1-title-animate");
   }),
-  os.on("enter", ".project-2", (e, t) => {
+  os.on("enter", ".js-project-2", (e, t) => {
     e.classList.add("project-2-animate"),
       document
-        .getElementById("project-2-title")
+        .getElementById("js-project-2-title")
         .classList.add("project-2-title-animate");
   }),
-  os.on("enter", ".project-3", (e, t) => {
+  os.on("enter", ".js-project-3", (e, t) => {
     e.classList.add("project-3-animate"),
       document
-        .getElementById("project-3-title")
+        .getElementById("js-project-3-title")
         .classList.add("project-3-title-animate");
   }),
-  os.on("enter", ".input-1", (e, t) => {
+  os.on("enter", ".js-input-1", (e, t) => {
     e.classList.add("input-1-fade-up");
   }),
-  os.on("enter", ".input-2", (e, t) => {
+  os.on("enter", ".js-input-2", (e, t) => {
     e.classList.add("input-2-fade-up");
   }),
-  os.on("enter", ".input-3", (e, t) => {
+  os.on("enter", ".js-input-3", (e, t) => {
     e.classList.add("input-3-fade-up");
   }),
-  os.on("enter", ".input-4", (e, t) => {
+  os.on("enter", ".js-input-4", (e, t) => {
     e.classList.add("input-4-fade-up");
   }),
-  os.on("enter", ".input-5", (e, t) => {
+  os.on("enter", ".js-input-5", (e, t) => {
     e.classList.add("input-5-fade-in");
   });
