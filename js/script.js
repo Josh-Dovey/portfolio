@@ -39,10 +39,10 @@ themeBtn.addEventListener("click", () => {
       document.documentElement.style.setProperty("--text", "#fff"),
       document.documentElement.style.setProperty("--input", "#151515"),
       (document.querySelector(".project-1").src =
-        "./assets/portfolio-dark.png"),
-      (document.querySelector(".project-2").src = "./assets/natours-dark.png"),
+        "./assets/portfolio-dark.jpg"),
+      (document.querySelector(".project-2").src = "./assets/natours-dark.jpg"),
       (document.querySelector(".project-3").src =
-        "./assets/noticeboard-dark.png"),
+        "./assets/noticeboard-dark.jpg"),
       localStorage.setItem("theme", "dark"),
       document.documentElement.classList.add("dark");
   }
