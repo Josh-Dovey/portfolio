@@ -1,0 +1,41 @@
+.row {
+  max-width: 114rem;
+  min-width: 250px;
+  width: 90%;
+  margin: 0 auto 60px;
+
+  @include respond(tab-land-small) {
+    max-width: 90%;
+  }
+
+  @include respond(tab-port) {
+    max-width: 80%;
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
+    }
+  }
+}
+
+.col-1-of-2 {
+  width: calc((100% - 60px) / 2);
+}
+
+.col-1-of-3 {
+  width: calc((100% - 2 * 61px) / 3);
+}

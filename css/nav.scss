@@ -1,0 +1,141 @@
+//////////////////////////////////////////
+// NAVIGATION
+
+.nav-bg {
+  position: fixed;
+  width: 100%;
+  padding: 3rem 0;
+  z-index: 10;
+  color: #fff;
+  color: var(--bg);
+  animation: fade-in 0.5s ease 1.7s backwards;
+
+  // FIXME: Disable js for nav below tab port and put nav on bottom of page
+  @include respond(tab-port) {
+    bottom: 0;
+
+    background-color: #fff;
+    background-color: var(--bg-2);
+    padding: 1.5rem 0 !important;
+    color: #2d81ff;
+    color: var(--main);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    @include respond(tab-port) {
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    & a {
+      &:link,
+      &:visited {
+        color: #000;
+        color: var(--text);
+      }
+
+      &::after {
+        background-color: #000;
+        background-color: var(--text);
+      }
+    }
+  }
+
+  &-fill {
+    background-color: #fff;
+    background-color: var(--bg-2);
+    padding: 1.5rem 0 !important;
+    color: #2d81ff;
+    color: var(--main);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    @include respond(tab-port) {
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    & a {
+      &:link,
+      &:visited {
+        color: #000;
+        color: var(--text);
+      }
+
+      &::after {
+        background-color: #000;
+        background-color: var(--text);
+      }
+    }
+  }
+}
+
+.nav {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  min-width: 300px;
+  width: 90%;
+  margin: 0 auto;
+
+  & .logo {
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  &-list {
+    display: flex;
+    list-style: none;
+
+    @include respond(tab-port) {
+      width: 100%;
+      justify-content: space-evenly;
+    }
+  }
+
+  &-item {
+    margin: 0 20px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &-link {
+    &:link,
+    &:visited {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #fff;
+      color: var(--bg);
+      position: relative;
+      transition: all ease 0.25s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: relative;
+      display: block;
+      height: 2px;
+      width: 0;
+      left: 0;
+      border-radius: 1px;
+      background-color: #fff;
+      background-color: var(--bg);
+      transition: all ease 0.25s;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+//////////////////////////////////////////
+// SERVICES
+
+section {
+  padding: 10rem 0;
+
+  @include respond(tab-land) {
+    &:first-of-type {
+      padding: 15rem 0 10rem;
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: 6rem 0;
+  }
+}
+
+.services {
+  &-p {
+    margin-bottom: 4rem;
+  }
+
+  &-svg {
+    color: #2d81ff;
+    color: var(--main);
+    height: 20rem;
+    width: 20rem;
+    display: block;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+      height: 15rem;
+      width: 15rem;
+    }
+  }
+
+  &-bg {
+    height: 80vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-land) {
+      height: 50vh;
+      min-height: 700px;
+    }
+
+    @include respond(tab-port) {
+      height: 70vh;
+    }
+
+    @include respond(phone) {
+      background-image: none !important;
+      min-height: 500px;
+    }
+  }
+
+  &-bg-left {
+    background-image: url("../assets/arrow-left.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px 0;
+
+    background-position: -20% 0;
+
+    @include respond(tab-land) {
+      background-size: 10%;
+    }
+  }
+
+  &-bg-right {
+    background-image: url("../assets/arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px 0;
+
+    background-position: 120% 0;
+
+    @include respond(tab-land) {
+      background-size: 10%;
+    }
+  }
+}
+
+.mobile-show {
+  display: none;
+
+  @include respond(tab-port) {
+    display: block;
+  }
+}
+
+.mobile-hide {
+  display: block;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.services {
+  &-1 {
+    transform: translateX(25px);
+    opacity: 0;
+  }
+
+  &-2 {
+    transform: translateX(-25px);
+    opacity: 0;
+  }
+
+  &-3 {
+    transform: translateX(25px);
+    opacity: 0;
+  }
+
+  &-4 {
+    transform: translateX(-25px);
+    opacity: 0;
+  }
+}

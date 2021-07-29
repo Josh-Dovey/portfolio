@@ -1,0 +1,51 @@
+///////////////////////////////////////////////
+// FOOTER
+
+footer {
+  background-color: #222;
+  padding: 5rem 0;
+  color: #fff;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a {
+    &:link,
+    &:visited {
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    &:hover {
+      color: #2d81ff;
+      color: var(--main);
+    }
+  }
+
+  h4 {
+    color: #2d81ff;
+    color: var(--main);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.footer {
+  @include respond(tab-port) {
+    padding-bottom: 15rem;
+  }
+  &-theme-box {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+}
