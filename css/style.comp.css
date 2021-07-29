@@ -256,6 +256,22 @@ p {
 h4 {
   font-size: 2rem; }
 
+.lost-page {
+  height: 100vh;
+  min-height: 600px; }
+
+.lost {
+  font-size: 250px; }
+  @media only screen and (max-width: 56.25em) {
+    .lost {
+      font-size: 120px; } }
+
+.lost-smaller {
+  font-size: 30px; }
+  @media only screen and (max-width: 56.25em) {
+    .lost-smaller {
+      font-size: 20px; } }
+
 .btn, .btn:link, .btn:visited {
   cursor: pointer;
   font-family: inherit;
