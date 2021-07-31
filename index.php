@@ -1,18 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <title>Portfolio 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <noscript> <link rel="Stylesheet" href="css/noscript.css" /> </noscript>
+    <title>Web Developer | Josh Dovey</title>
+    <meta
+      name="description"
+      content="My name's Josh and I make websites. Need help with a website?"
+    />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicon/safari-pinned-tab.svg"
+      color="#2d81ff"
+    />
+    <meta name="apple-mobile-web-app-title" content="Josh Dovey" />
+    <meta name="application-name" content="Josh Dovey" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- SEO -->
+    <!-- TODO: Set to live url -->
+    <!-- <link rel=“canonical” href=“https://example.com/sample-page” /> -->
+    <!-- TODO: If create a twitter account change data -->
+    <!-- TODO: Create twitter card and facebook card images -->
+    <!-- Twitter Card -->
+    <!-- <meta name="twitter:card" content="summary" /> <meta name="twitter:site" content="@yoursite" /> <meta name="twitter:title" content="Freelance Web Developer | Josh Dovey" /> <meta name="twitter:description" content="My name's Josh and I make websites. Need help with a website? Check out my skills and previous projects to see how I can help you create your amazing website!" /> <meta name="twitter:image" content="./assets/favicon/favicon-32x32.png" /> -->
+    <!-- Facebook OpenGraph -->
+    <!-- TODO: Set to live url -->
+    <!-- <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" /> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Freelance Web Developer | Josh Dovey" />
+    <meta
+      property="og:description"
+      content="My name's Josh and I make websites. Need help with a website? Check out my skills and previous projects to see how I can help you create your amazing website!"
+    />
+    <meta property="og:image" content="./assets/favicon/favicon-32x32.png" />
+    <!-- TODO: Set to live URL -->
+    <!-- <link rel="canonical" href="https://joshdovey.co.uk" /> -->
+    <link rel="preload" href="/js/bundle.js" />
   </head>
   <body>
     <div class="nav-bg" id="nav-box">
       <nav class="nav">
         <p class="logo">Joshua Dovey</p>
-
-        <ul class="nav-list" role="navigation">
+        <ul class="nav-list">
           <li class="nav-item">
             <a href="#services" class="nav-link">Services</a>
           </li>
@@ -25,7 +83,6 @@
         </ul>
       </nav>
     </div>
-
     <header id="header">
       <div class="row header-grid-box">
         <div class="header-text-box">
@@ -36,21 +93,29 @@
               flourish</span
             >
           </h1>
-          <a href="#portfolio" class="btn btn-white">Portfolio</a>
+          <a href="#portfolio" class="btn btn-white fade-in">View Portfolio</a>
         </div>
       </div>
     </header>
-
     <section class="services" id="services">
       <div class="row align-right">
-        <h2 class="h2">Services</h2>
-        <hr class="h2-hr" />
+        <h2 class="h2 js-services-heading">Services</h2>
+        <hr class="h2-hr" id="js-services-hr" />
       </div>
-
-      <div class="services-bg services-bg-right responsive">
-        <div class="row">
+      <div class="services-bg services-bg-right js-services-bg-1">
+        <div class="row services-1 js-services-1">
+          <div class="col-1-of-2 mobile-show">
+            <img
+              loading="lazy"
+              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=device-mobile"
+              alt="Mobile Device Icon"
+              width="32"
+              height="32"
+              class="services-svg"
+            />
+          </div>
           <div class="col-1-of-2">
-            <h3>Responsive</h3>
+            <h3>Responsive Design</h3>
             <p class="services-p">
               Over 50% of the web is viewed on mobile devices! It's essential
               then that your site is compatible on multiple screen sizes.
@@ -60,43 +125,53 @@
               monitor to a small smartphone!
             </p>
           </div>
-          <div class="col-1-of-2">
-            <svg
-              data-src="https://s2.svgbox.net/octicons.svg?ic=device-mobile"
+          <div class="col-1-of-2 mobile-hide">
+            <img
+              loading="lazy"
+              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=device-mobile"
+              alt="Mobile Device Icon"
+              width="32"
+              height="32"
               class="services-svg"
-            ></svg>
+            />
           </div>
         </div>
       </div>
-
-      <div class="services-bg services-bg-left">
-        <div class="row">
+      <div class="services-bg services-bg-left js-services-bg-2">
+        <div class="row services-2 js-services-2">
           <div class="col-1-of-2">
-            <svg
-              data-src="https://s2.svgbox.net/octicons.svg?ic=rocket"
+            <img
+              loading="lazy"
+              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=rocket"
+              alt="Rocket Icon"
+              width="32"
+              height="32"
               class="services-svg"
-            ></svg>
+            />
           </div>
           <div class="col-1-of-2">
-            <h3>Speedy</h3>
+            <h3>Rapid Loads</h3>
             <p class="services-p">
               Slow websites are the quickest way to get rid of visitors! My job
               is to eliminate that problem and increase the amount of visitors
               to your website.
-
-              <!-- You've been in the situation. You know, Wi-Fi has gone down and
-              you use some real slow mobile data. Horrible isn't it? Well you
-              see my job is to make your site load as quick as it possibly can.
-              Imagine the happiness you'll feel when your site loads before
-              anyone else's? -->
             </p>
             <p class="services-p">Your sites effiency is a key priority!</p>
           </div>
         </div>
       </div>
-
-      <div class="services-bg services-bg-right">
-        <div class="row">
+      <div class="services-bg services-bg-right js-services-bg-3">
+        <div class="row services-3 js-services-3">
+          <div class="col-1-of-2 mobile-show">
+            <img
+              loading="lazy"
+              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=search"
+              alt="Magnifying Glass Icon"
+              width="32"
+              height="32"
+              class="services-svg"
+            />
+          </div>
           <div class="col-1-of-2">
             <h3>SEO</h3>
             <p class="services-p">
@@ -109,22 +184,29 @@
               search engine results!
             </p>
           </div>
-          <div class="col-1-of-2">
-            <svg
-              data-src="https://s2.svgbox.net/octicons.svg?ic=search"
+          <div class="col-1-of-2 mobile-hide">
+            <img
+              loading="lazy"
+              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=search"
+              alt="Magnifying Glass Icon"
+              width="32"
+              height="32"
               class="services-svg"
-            ></svg>
+            />
           </div>
         </div>
       </div>
-
-      <div class="services-bg services-bg-left">
-        <div class="row">
+      <div class="services-bg services-bg-left js-services-bg-4">
+        <div class="row services-4 js-services-4">
           <div class="col-1-of-2">
-            <svg
-              data-src="https://s2.svgbox.net/octicons.svg?ic=tools"
+            <img
+              loading="lazy"
+              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=tools"
+              alt="Spanner Icon"
+              width="32"
+              height="32"
               class="services-svg"
-            ></svg>
+            />
           </div>
           <div class="col-1-of-2">
             <h3>Maintenance</h3>
@@ -142,115 +224,154 @@
         </div>
       </div>
     </section>
-
     <section class="portfolio" id="portfolio">
       <div class="row align-left">
-        <h2 class="h2" id="project-name">Portfolio</h2>
-        <hr class="h2-hr" />
+        <h2 class="h2 js-portfolio-heading" id="js-project-name">Portfolio</h2>
+        <hr class="h2-hr" id="js-portfolio-hr" />
       </div>
-
-      <div class="row project-showcase-div">
+      <div class="row project-showcase-div js-project-list">
         <div class="col-1-of-3 project-container">
-          <div class="project-img-container" onclick="displayProject(0)">
+          <div class="project-img-container" id="js-portfolio-1">
             <img
               loading="lazy"
+              srcset="./assets/portfolio.webp"
               src="./assets/portfolio.png"
               alt="Portfolio Project"
-              class="project-img"
+              class="project-img js-project-1"
+              height="200"
+              width="350"
             />
+            <noscript class="noscript-project-container">
+              <a
+                class="noscript-project-link"
+                href="https://joshdovey.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+            </noscript>
           </div>
-
-          <h4>Portfolio</h4>
+          <h4 id="js-project-1-title">Portfolio</h4>
         </div>
         <div class="col-1-of-3 project-container">
-          <div class="project-img-container" onclick="displayProject(1)">
+          <div class="project-img-container" id="js-portfolio-2">
             <img
               loading="lazy"
+              srcset="./assets/natours.webp"
               src="./assets/natours.png"
               alt="Natours Project"
-              class="project-img"
+              class="project-img js-project-2"
+              height="200"
+              width="350"
             />
+            <noscript class="noscript-project-container">
+              <a
+                class="noscript-project-link"
+                href="https://github.com/Josh-Dovey/Natours"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+            </noscript>
           </div>
-
-          <h4>Natours</h4>
+          <h4 id="js-project-2-title">Natours</h4>
         </div>
         <div class="col-1-of-3 project-container">
-          <div class="project-img-container" onclick="displayProject(2)">
+          <div class="project-img-container" id="js-portfolio-3">
             <img
               loading="lazy"
+              srcset="./assets/noticeboard.webp"
               src="./assets/noticeboard.png"
               alt="Notice Board Project"
-              class="project-img"
+              class="project-img js-project-3"
+              height="200"
+              width="350"
             />
+            <noscript class="noscript-project-container">
+              <a
+                class="noscript-project-link"
+                href="https://kidderminster-kh-notice-board.herokuapp.com/home"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+            </noscript>
           </div>
-
-          <h4>Notice Board</h4>
+          <h4 id="js-project-3-title">Notice Board</h4>
         </div>
       </div>
-
-      <div class="row project-info-div">
+      <div class="row project-info-div js-project-info-div">
         <div class="col-1-of-2 project-info-img-container">
-          <button class="project-info-back">
-            <svg
-              data-src="https://s2.svgbox.net/octicons.svg?ic=chevron-left"
-            ></svg>
+          <button class="project-info-back js-project-back">
+            <img
+              loading="lazy"
+              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=chevron-left-bold"
+              alt="Back Arrow Icon"
+              width="32"
+              height="32"
+            />
             Back
           </button>
           <img
-            src=""
+            src="./assets/portfolio-mobile.jpg"
             alt="Portfolio Info Page"
             class="project-info-img"
-            id="project-img"
+            id="js-project-img"
           />
         </div>
-
         <div class="col-1-of-2 project-info">
           <h4>Description</h4>
-          <p id="project-p1">
+          <p id="js-project-p1">
             This one took me a while. But as I was learning new techniques, I
             wanted to implement them straight away in my own designs. And as
             this site is giving you a glimpse into my skills, it was kind of
             important that I understood what I was doing.
           </p>
-
-          <p id="project-p2">
+          <p id="js-project-p2">
             This one took me a while. But as I was learning new techniques, I
             wanted to implement them straight away in my own designs. And as
             this site is giving you a glimpse into my skills, it was kind of
             important that I understood what I was doing.
           </p>
-
           <div class="project-info-btns">
-            <a href="#" class="btn btn-blue">Visit</a>
-            <a href="#" class="btn btn-blue">Code</a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-blue"
+              id="js-project-visit"
+              >Visit</a
+            >
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-blue"
+              id="js-project-code"
+              >Code</a
+            >
           </div>
         </div>
       </div>
     </section>
-
     <section class="contact" id="contact">
       <div class="row align-right">
-        <h2 class="h2">Contact</h2>
-        <hr class="h2-hr" />
+        <h2 class="h2 js-contact-heading">Contact</h2>
+        <hr class="h2-hr" id="js-contact-hr" />
       </div>
-
-      <form class="form" id="form">
+      <form method="post" action="mailer.php" class="form" id="form">
         <div class="row row-contact">
-          <div class="col-1-of-3">
+          <div class="col-1-of-3 input-1 js-input-1">
             <label for="name" class="form-label">Name</label>
             <input type="text" name="name" id="name" class="form-input" />
           </div>
-          <div class="col-1-of-3">
+          <div class="col-1-of-3 input-2 js-input-2">
             <label for="email" class="form-label">Email</label>
             <input type="email" name="email" id="email" class="form-input" />
           </div>
-          <div class="col-1-of-3">
+          <div class="col-1-of-3 input-3 js-input-3">
             <label for="number" class="form-label">Number</label>
             <input type="tel" name="number" id="number" class="form-input" />
           </div>
         </div>
-
-        <div class="row row-textarea">
+        <div class="row row-textarea input-4 js-input-4">
           <label for="message" class="form-label">Message</label>
           <textarea
             name="message"
@@ -260,15 +381,16 @@
             class="form-textarea"
           ></textarea>
         </div>
-
         <div class="row">
-          <input
-            type="submit"
-            class="btn btn-blue btn-form"
-            id="form-btn"
-            value="Submit"
-          />
-
+          <div class="col-1-of-2 input-5 js-input-5">
+            <input
+              type="submit"
+              class="btn btn-blue btn-form"
+              id="form-btn"
+              value="Submit"
+            />
+          </div>
+          <div class="col-1-of-2">
           <?php 
             if($_GET['success'] == 1) {
                 echo "<p class=\"form-message success\" id=\"form-msg\">Message sent successfully!</p>";
@@ -278,11 +400,10 @@
                 echo "<p class=\"form-message error\" id=\"form-msg\">Something went wrong!</p>";
             }
           ?>
-          <p class="form-message" id="form-msg"></p>
+          </div>
         </div>
       </form>
     </section>
-
     <footer class="footer">
       <div class="row margin-bottom-none">
         <div class="col-1-of-3 quick-nav">
@@ -293,24 +414,21 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
-
         <div class="col-1-of-3 footer-theme-box">
-          <button class="btn btn-theme" id="theme-switch">Switch Theme</button>
+          <button class="btn btn-theme" id="js-theme-switch">
+            Switch Theme
+          </button>
         </div>
-
         <div class="col-1-of-3 stuff">
           <h4>Stuff...</h4>
           <p>2021 &copy; Joshua Dovey</p>
         </div>
       </div>
     </footer>
-
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js"
-      async
-    ></script>
-
-    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/onscreen/dist/on-screen.umd.min.js"></script>
+    <script src="js/bundle.js" defer></script>
+    <noscript class="noscript-advisory"
+      >Please enable Javascript for a better experience</noscript
+    >
   </body>
 </html>

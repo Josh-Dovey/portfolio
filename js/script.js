@@ -4,9 +4,9 @@ if (localStorage.getItem("theme") === "dark") {
   document.documentElement.style.setProperty("--bg-2", "#0f0f0f");
   document.documentElement.style.setProperty("--text", "#fff");
   document.documentElement.style.setProperty("--input", "#151515");
-  document.querySelector(".project-1").src = "./assets/portfolio-dark.png";
-  document.querySelector(".project-2").src = "./assets/natours-dark.png";
-  document.querySelector(".project-3").src = "./assets/noticeboard-dark.png";
+  document.querySelector(".js-project-1").src = "./assets/portfolio-dark.jpg";
+  document.querySelector(".js-project-2").src = "./assets/natours-dark.jpg";
+  document.querySelector(".js-project-3").src = "./assets/noticeboard-dark.jpg";
   document.documentElement.classList.add("dark");
 }
 

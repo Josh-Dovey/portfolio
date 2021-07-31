@@ -18,11 +18,26 @@ section {
 .services {
   &-p {
     margin-bottom: 4rem;
+
+    a {
+      &:link,
+      &:visited {
+        color: #2d81ff;
+        color: var(--main);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      &:hover,
+      &:visited {
+        color: #2d81ff;
+        color: var(--main);
+        text-decoration: underline;
+      }
+    }
   }
 
   &-svg {
-    color: #2d81ff;
-    color: var(--main);
     height: 20rem;
     width: 20rem;
     display: block;
