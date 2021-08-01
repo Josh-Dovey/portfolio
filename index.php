@@ -107,7 +107,7 @@
           <div class="col-1-of-2 mobile-show">
             <img
               loading="lazy"
-              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=device-mobile"
+              src="./assets/phone-portrait-outline.svg"
               alt="Mobile Device Icon"
               width="32"
               height="32"
@@ -118,20 +118,20 @@
             <h3>Responsive Design</h3>
             <p class="services-p">
               Over 50% of the web is viewed on mobile devices! It's essential
-              then that your site is compatible on multiple screen sizes.
+              then that your site is compatible with multiple screen sizes.
             </p>
             <p class="services-p">
-              Your website will look great and work consistenly from a giant 4k
+              Your website will look great and work consistently from a giant 4k
               monitor to a small smartphone!
             </p>
           </div>
           <div class="col-1-of-2 mobile-hide">
             <img
               loading="lazy"
-              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=device-mobile"
+              src="./assets/phone-portrait-outline.svg"
               alt="Mobile Device Icon"
-              width="32"
-              height="32"
+              width="180"
+              height="180"
               class="services-svg"
             />
           </div>
@@ -142,21 +142,36 @@
           <div class="col-1-of-2">
             <img
               loading="lazy"
-              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=rocket"
+              src="./assets/flash-outline.svg"
               alt="Rocket Icon"
-              width="32"
-              height="32"
+              width="180"
+              height="180"
               class="services-svg"
             />
           </div>
           <div class="col-1-of-2">
             <h3>Rapid Loads</h3>
             <p class="services-p">
-              Slow websites are the quickest way to get rid of visitors! My job
-              is to eliminate that problem and increase the amount of visitors
-              to your website.
+              Slow websites are the quickest way to lose visitors! A recent
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.akamai.com/uk/en/about/news/press/2017-press/akamai-releases-spring-2017-state-of-online-retail-performance-report.jsp#:~:text=A%20two-second%20delay%20in%20web%20page%20load%20time%20increase%20bounce%20rates%20by%20103%20percent"
+                >study</a
+              >
+              found that a 2 second delay in page speed can increase
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.abtasty.com/blog/bounce-rate/#:~:text=To%20bounce%20from%20a%20website%20is%20to%20leave%20it%20before%20interacting%20with%20the%20site%20in%20some%20way%2C"
+                >bounce rates</a
+              >
+              by 103%!
             </p>
-            <p class="services-p">Your sites effiency is a key priority!</p>
+            <p class="services-p">
+              My job is to eliminate that problem and increase the number of
+              visitors to your site.
+            </p>
           </div>
         </div>
       </div>
@@ -165,32 +180,32 @@
           <div class="col-1-of-2 mobile-show">
             <img
               loading="lazy"
-              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=search"
+              src="./assets/search-outline.svg"
               alt="Magnifying Glass Icon"
-              width="32"
-              height="32"
+              width="180"
+              height="180"
               class="services-svg"
             />
           </div>
           <div class="col-1-of-2">
             <h3>SEO</h3>
             <p class="services-p">
-              Have you ever searched through the 1,330,000,000 google results? I
-              know I haven't. That's why it is imperative that everyone sees
-              your website at the top.
+              Have you ever searched through the 709,000,000 google results? I
+              doubt it! That's why it's imperative that visistors find your site
+              with ease.
             </p>
             <p class="services-p">
-              I'll use the best seo techniques to get your website at the top of
-              search engine results!
+              I'll use the best and latest seo techniques to get your website at
+              the top of search engine results!
             </p>
           </div>
           <div class="col-1-of-2 mobile-hide">
             <img
               loading="lazy"
-              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=search"
+              src="./assets/search-outline.svg"
               alt="Magnifying Glass Icon"
-              width="32"
-              height="32"
+              width="180"
+              height="180"
               class="services-svg"
             />
           </div>
@@ -201,10 +216,10 @@
           <div class="col-1-of-2">
             <img
               loading="lazy"
-              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=tools"
+              src="./assets/refresh-outline.svg"
               alt="Spanner Icon"
-              width="32"
-              height="32"
+              width="180"
+              height="180"
               class="services-svg"
             />
           </div>
@@ -234,7 +249,6 @@
           <div class="project-img-container" id="js-portfolio-1">
             <img
               loading="lazy"
-              srcset="./assets/portfolio.webp"
               src="./assets/portfolio.png"
               alt="Portfolio Project"
               class="project-img js-project-1"
@@ -256,7 +270,6 @@
           <div class="project-img-container" id="js-portfolio-2">
             <img
               loading="lazy"
-              srcset="./assets/natours.webp"
               src="./assets/natours.png"
               alt="Natours Project"
               class="project-img js-project-2"
@@ -278,7 +291,6 @@
           <div class="project-img-container" id="js-portfolio-3">
             <img
               loading="lazy"
-              srcset="./assets/noticeboard.webp"
               src="./assets/noticeboard.png"
               alt="Notice Board Project"
               class="project-img js-project-3"
@@ -310,6 +322,7 @@
             Back
           </button>
           <img
+            loading="lazy"
             src="./assets/portfolio-mobile.jpg"
             alt="Portfolio Info Page"
             class="project-info-img"
@@ -425,7 +438,7 @@
         </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/onscreen/dist/on-screen.umd.min.js"></script>
+    <script src="js/onscreen.js" defer></script>
     <script src="js/bundle.js" defer></script>
     <noscript class="noscript-advisory"
       >Please enable Javascript for a better experience</noscript
