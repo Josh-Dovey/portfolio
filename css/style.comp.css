@@ -6,27 +6,29 @@
 
 @keyframes fade-in-up {
   0% {
-    transform: translateY(25px);
+    transform: translateY(30px);
     opacity: 0; }
   100% {
     transform: translateY(0px);
     opacity: 1; } }
 
-@keyframes fade-in-left {
+@keyframes fade-up {
   0% {
-    transform: translateX(25px);
-    opacity: 0; }
+    transform: translateY(30px); }
   100% {
-    transform: translateX(0px);
-    opacity: 1; } }
+    transform: translateY(0); } }
 
-@keyframes fade-in-right {
+@keyframes fade-left {
   0% {
-    transform: translateX(-25px);
-    opacity: 0; }
+    transform: translateX(30px); }
   100% {
-    transform: translateX(0px);
-    opacity: 1; } }
+    transform: translateX(0px); } }
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(-30px); }
+  100% {
+    transform: translateX(0px); } }
 
 @keyframes fade-in-scale {
   0% {
@@ -42,95 +44,56 @@
   100% {
     width: 6rem; } }
 
-@keyframes background-slide-left {
+@keyframes bg-slide-left {
   0% {
     background-position: 120% 0; }
   100% {
     background-position: 100% 0; } }
 
-@keyframes background-slide-right {
+@keyframes bg-slide-right {
   0% {
     background-position: -20% 0; }
   100% {
     background-position: 0% 0; } }
 
-.hr-animate {
-  animation: extend 0.6s ease 0.45s forwards; }
+.hidden {
+  opacity: 0; }
 
-.heading-2-animate-left {
-  animation: fade-in-left 0.4s ease-out 0.1s forwards; }
+.hidden-fade {
+  opacity: 0; }
 
-.heading-2-animate-right {
-  animation: fade-in-right 0.4s ease 0.1s forwards; }
+.fade-up-element {
+  animation: fade-up 0.4s ease-out forwards; }
 
-.services-bg-left-animate {
-  animation: background-slide-left 0.4s ease 0.1s forwards; }
+.hidden-fade-left {
+  opacity: 0; }
 
-.services-bg-right-animate {
-  animation: background-slide-right 0.4s ease 0.1s forwards; }
+.fade-left {
+  animation: fade-left 0.4s ease-out forwards; }
 
-.services-fade-left {
-  animation: fade-in-left 0.4s ease 0.1s forwards; }
+.hidden-fade-right {
+  opacity: 0; }
 
-.services-fade-right {
-  animation: fade-in-right 0.4s ease 0.1s forwards; }
+.fade-right {
+  animation: fade-right 0.4s ease-out forwards; }
 
-.project-1-animate {
-  animation: fade-in-scale 0.4s ease 0.1s forwards; }
+.hidden-extend {
+  width: 0; }
 
-.project-1-title-animate {
-  animation: fade-in 0.4s ease 0.15s forwards; }
+.extend {
+  animation: extend 0.6s ease forwards; }
 
-.project-2-animate {
-  animation: fade-in-scale 0.4s ease 0.3s forwards; }
-  @media only screen and (max-width: 56.25em) {
-    .project-2-animate {
-      animation-delay: 0.1s; } }
+.hidden-bg-1 {
+  background-position: 120% 0; }
 
-.project-2-title-animate {
-  animation: fade-in 0.4s ease 0.35s forwards; }
-  @media only screen and (max-width: 56.25em) {
-    .project-2-title-animate {
-      animation-delay: 0.15s; } }
+.bg-left {
+  animation: bg-slide-left 0.4s ease forwards; }
 
-.project-3-animate {
-  animation: fade-in-scale 0.4s ease 0.5s forwards; }
-  @media only screen and (max-width: 56.25em) {
-    .project-3-animate {
-      animation-delay: 0.1s; } }
+.hidden-bg-2 {
+  background-position: -20% 0; }
 
-.project-3-title-animate {
-  animation: fade-in 0.4s ease 0.55s forwards; }
-  @media only screen and (max-width: 56.25em) {
-    .project-3-title-animate {
-      animation-delay: 0.15s; } }
-
-.input-1-fade-up {
-  animation: fade-in-up 0.4s ease 0.1s forwards; }
-
-.input-2-fade-up {
-  animation: fade-in-up 0.4s ease 0.3s forwards; }
-  @media only screen and (max-width: 56.25em) {
-    .input-2-fade-up {
-      animation-delay: 0.1s; } }
-
-.input-3-fade-up {
-  animation: fade-in-up 0.4s ease 0.5s forwards; }
-  @media only screen and (max-width: 56.25em) {
-    .input-3-fade-up {
-      animation-delay: 0.1s; } }
-
-.input-4-fade-up {
-  animation: fade-in-up 0.4s ease 0.7s forwards; }
-  @media only screen and (max-width: 56.25em) {
-    .input-4-fade-up {
-      animation-delay: 0.1s; } }
-
-.input-5-fade-in {
-  animation: fade-in 0.4s ease 0.9s forwards; }
-  @media only screen and (max-width: 56.25em) {
-    .input-5-fade-in {
-      animation-delay: 0.1s; } }
+.bg-right {
+  animation: bg-slide-right 0.4s ease forwards; }
 
 .row {
   max-width: 114rem;
@@ -219,8 +182,7 @@ body {
 
 .h2 {
   font-size: 5rem;
-  margin-bottom: 5px;
-  opacity: 0; }
+  margin-bottom: 5px; }
 
 .align-left {
   display: flex;
@@ -238,7 +200,6 @@ body {
     margin-left: auto; }
 
 .h2-hr {
-  width: 0px;
   height: 6px;
   background-color: #2d81ff;
   background-color: var(--main);
@@ -274,7 +235,7 @@ h4 {
 .btn, .btn:link, .btn:visited {
   cursor: pointer;
   font-family: inherit;
-  padding: 2rem 8rem;
+  padding: 2rem 6rem;
   font-size: 2rem;
   font-weight: 700;
   display: inline-block;
@@ -351,7 +312,7 @@ h4 {
       bottom: 0;
       background-color: #fff;
       background-color: var(--bg-2);
-      padding: 1.5rem 0 !important;
+      padding: 2rem 0 !important;
       color: #2d81ff;
       color: var(--main);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); } }
@@ -387,7 +348,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1140px;
+  max-width: 114rem;
   min-width: 300px;
   width: 90%;
   margin: 0 auto; }
@@ -479,7 +440,7 @@ header {
     animation: fade-in-up 0.5s ease 1.3s backwards; }
 
 h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   margin-bottom: 6rem;
   animation: fade-in-up 0.5s ease 0.5s backwards; }
   @media only screen and (max-width: 56.25em) {
@@ -580,8 +541,7 @@ section {
   background-image: url("../assets/arrow-left.png");
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 20px 0;
-  background-position: -20% 0; }
+  padding: 20px 0; }
   @media only screen and (max-width: 90.625em) {
     .services-bg-left {
       background-size: 10%; } }
@@ -590,8 +550,7 @@ section {
   background-image: url("../assets/arrow-right.png");
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 20px 0;
-  background-position: 120% 0; }
+  padding: 20px 0; }
   @media only screen and (max-width: 90.625em) {
     .services-bg-right {
       background-size: 10%; } }
@@ -624,100 +583,182 @@ section {
   transform: translateX(-25px);
   opacity: 0; }
 
-.project-showcase-div {
-  opacity: 1;
-  transition: all 0.4s; }
+.project-name {
+  margin-bottom: 5px; }
 
-.project-container {
-  text-align: center;
-  border-radius: 3px;
-  overflow: hidden; }
-  .project-container h4 {
-    opacity: 0; }
-
-.project-img {
-  border-radius: 3px;
+.project-box {
+  height: 600px;
   width: 100%;
-  height: auto;
-  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.11);
-  transform: scale(0.25);
-  opacity: 0; }
-
-.project-img-container {
-  margin-bottom: 20px;
-  transition: all 0.25s ease;
-  cursor: pointer;
+  display: block;
+  margin-bottom: 60px;
+  border-radius: 20px;
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.11);
+  color: #fff;
+  padding: 60px;
+  font-size: 28px;
+  background-size: 95%;
+  background-repeat: no-repeat;
+  transition: all 0.4s ease-out;
   position: relative;
-  width: 100%; }
-  .project-img-container::after {
-    content: " View";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    font-family: inherit;
-    font-size: 20px;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: all 0.25s ease; }
-  .project-img-container:hover::after {
-    opacity: 1; }
-
-.project-info {
-  height: 100%;
-  margin: 15vh 0; }
-  @media only screen and (max-width: 37.5em) {
-    .project-info {
-      margin: 0; } }
-  .project-info-div {
-    opacity: 0;
-    transition: all 0.4s;
-    display: none;
-    height: 100%; }
-  .project-info-back {
-    margin-bottom: 6rem;
-    font: inherit;
-    border: 2px solid transparent;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: #000;
-    color: var(--text);
-    padding: 4px 8px 4px 0;
-    border-radius: 3px;
-    transition: all 0.25s ease; }
-    .project-info-back:hover {
-      border: 2px solid #000;
-      border: 2px solid var(--text); }
-    .project-info-back img {
-      margin-right: 1rem; }
-  .project-info-img-container {
-    position: relative; }
-  .project-info-img {
-    width: 100%; }
-  .project-info p {
-    margin: 2rem 0; }
-  .project-info-btns {
-    margin-top: 6rem;
-    display: flex; }
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  .project-box:link, .project-box:visited {
+    text-decoration: none; }
+  @media only screen and (max-width: 90.625em) {
+    .project-box {
+      margin-bottom: 30px; } }
+  @media only screen and (max-width: 56.25em) {
+    .project-box {
+      padding: 30px;
+      height: 450px; } }
+  .project-box:hover {
+    transform: scale(1.04);
+    filter: brightness(1.05);
+    cursor: pointer; }
+  .project-box h4 {
+    font-size: 16px; }
+  .project-box-natours {
+    background-color: #55c57a;
+    background-image: url("../assets/work/natours-clay@1x.png");
+    background-position: 200% 60%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-natours {
+        background-image: url("../assets/work/natours-clay@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-natours {
+        background-image: url("../assets/work/natours-clay@3x.png"); } }
+  .project-box-portfolio {
+    background-color: #2781ff;
+    background-color: var(--main);
+    background-image: url("../assets/work/portfolio-clay@1x.png");
+    background-position: -150% 65%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-portfolio {
+        background-image: url("../assets/work/portfolio-clay@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-portfolio {
+        background-image: url("../assets/work/portfolio-clay@3x.png"); } }
+  .project-box-omnifood {
+    background-color: #e67e22;
+    background-image: url("../assets/work/omnifood-clay@1x.png");
+    background-position: 50% 70%;
+    background-size: 100%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-omnifood {
+        background-image: url("../assets/work/omnifood-clay@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-omnifood {
+        background-image: url("../assets/work/omnifood-clay@3x.png"); } }
+  .project-box-nexter {
+    background-color: #101d2c;
+    background-image: url("../assets/work/nexter-clay@1x.png");
+    background-position: 40% 70%;
+    background-size: 75%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-nexter {
+        background-image: url("../assets/work/nexter-clay@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-nexter {
+        background-image: url("../assets/work/nexter-clay@3x.png"); } }
     @media only screen and (max-width: 56.25em) {
-      .project-info-btns {
-        display: block; }
-        .project-info-btns a {
-          width: 100%;
-          text-align: center; } }
-    .project-info-btns a:first-of-type {
-      margin-right: 6rem; }
-      @media only screen and (max-width: 56.25em) {
-        .project-info-btns a:first-of-type {
-          margin-bottom: 2rem; } }
+      .project-box-nexter {
+        margin-bottom: 0 !important; } }
+  .project-box-trillo {
+    background-color: #eb2f64;
+    background-image: url("../assets/work/trillo-clay@1x.png");
+    background-position: 200% 70%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-trillo {
+        background-image: url("../assets/work/trillo-clay@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-trillo {
+        background-image: url("../assets/work/trillo-clay@3x.png"); } }
+  .project-box-noticeboard {
+    background-color: #1771ff;
+    background-image: url("../assets/work/noticeboard-clay@1x.png");
+    background-position: 100% 70%;
+    background-size: 105%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-noticeboard {
+        background-image: url("../assets/work/noticeboard-clay@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-noticeboard {
+        background-image: url("../assets/work/noticeboard-clay@3x.png"); } }
+  .project-box-natours-dark {
+    background-color: #55c57a;
+    background-image: url("../assets/work/natours-clay-dark@1x.png");
+    background-position: 200% 60%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-natours-dark {
+        background-image: url("../assets/work/natours-clay-dark@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-natours-dark {
+        background-image: url("../assets/work/natours-clay-dark@3x.png"); } }
+  .project-box-portfolio-dark {
+    background-color: #2781ff;
+    background-color: var(--main);
+    background-image: url("../assets/work/portfolio-clay-dark@1x.png");
+    background-position: -150% 65%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-portfolio-dark {
+        background-image: url("../assets/work/portfolio-clay-dark@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-portfolio-dark {
+        background-image: url("../assets/work/portfolio-clay-dark@3x.png"); } }
+  .project-box-omnifood-dark {
+    background-color: #e67e22;
+    background-image: url("../assets/work/omnifood-clay-dark@1x.png");
+    background-position: 50% 70%;
+    background-size: 100%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-omnifood-dark {
+        background-image: url("../assets/work/omnifood-clay-dark@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-omnifood-dark {
+        background-image: url("../assets/work/omnifood-clay-dark@3x.png"); } }
+  .project-box-nexter-dark {
+    background-color: #101d2c;
+    background-image: url("../assets/work/nexter-clay-dark@1x.png");
+    background-position: 40% 70%;
+    background-size: 75%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-nexter-dark {
+        background-image: url("../assets/work/nexter-clay-dark@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-nexter-dark {
+        background-image: url("../assets/work/nexter-clay-dark@3x.png"); } }
+    @media only screen and (max-width: 56.25em) {
+      .project-box-nexter-dark {
+        margin-bottom: 0 !important; } }
+  .project-box-trillo-dark {
+    background-color: #eb2f64;
+    background-image: url("../assets/work/trillo-clay-dark@1x.png");
+    background-position: 200% 70%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-trillo-dark {
+        background-image: url("../assets/work/trillo-clay-dark@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-trillo-dark {
+        background-image: url("../assets/work/trillo-clay-dark@3x.png"); } }
+  .project-box-noticeboard-dark {
+    background-color: #1771ff;
+    background-image: url("../assets/work/noticeboard-clay-dark@1x.png");
+    background-position: 100% 70%;
+    background-size: 95%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .project-box-noticeboard-dark {
+        background-image: url("../assets/work/noticeboard-clay-dark@2x.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+      .project-box-noticeboard-dark {
+        background-image: url("../assets/work/noticeboard-clay-dark@3x.png"); } }
+
+.project-right-col-margin {
+  margin-top: 20rem; }
+  @media only screen and (max-width: 56.25em) {
+    .project-right-col-margin {
+      margin-top: 0; } }
+
+.hidden {
+  opacity: 0; }
 
 .contact-send {
   display: flex;

@@ -154,9 +154,9 @@
   font-size: 28px;
   background-size: 95%;
   background-repeat: no-repeat;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-out;
   position: relative;
-  transform: translateY(30px);
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 
   &:link,
   &:visited {
@@ -173,8 +173,8 @@
   }
 
   &:hover {
-    transform: scale(1.03);
-    filter: brightness(1.03);
+    transform: scale(1.04);
+    filter: brightness(1.05);
     cursor: pointer;
   }
 
@@ -331,6 +331,159 @@
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
       background-image: url("../assets/work/noticeboard-clay@3x.png");
+    }
+  }
+
+  // DARK
+  &-natours-dark {
+    background-color: #55c57a;
+    background-image: url("../assets/work/natours-clay-dark@1x.png");
+    background-position: 200% 60%;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min--moz-device-pixel-ratio: 2),
+      only screen and (-o-min-device-pixel-ratio: 2/1),
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/work/natours-clay-dark@2x.png");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 3),
+      only screen and (min--moz-device-pixel-ratio: 3),
+      only screen and (-o-min-device-pixel-ratio: 3/1),
+      only screen and (min-device-pixel-ratio: 3),
+      only screen and (min-resolution: 288dpi),
+      only screen and (min-resolution: 3dppx) {
+      background-image: url("../assets/work/natours-clay-dark@3x.png");
+    }
+  }
+
+  &-portfolio-dark {
+    background-color: #2781ff;
+    background-color: var(--main);
+    background-image: url("../assets/work/portfolio-clay-dark@1x.png");
+    background-position: -150% 65%;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min--moz-device-pixel-ratio: 2),
+      only screen and (-o-min-device-pixel-ratio: 2/1),
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/work/portfolio-clay-dark@2x.png");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 3),
+      only screen and (min--moz-device-pixel-ratio: 3),
+      only screen and (-o-min-device-pixel-ratio: 3/1),
+      only screen and (min-device-pixel-ratio: 3),
+      only screen and (min-resolution: 288dpi),
+      only screen and (min-resolution: 3dppx) {
+      background-image: url("../assets/work/portfolio-clay-dark@3x.png");
+    }
+  }
+
+  &-omnifood-dark {
+    background-color: #e67e22;
+    background-image: url("../assets/work/omnifood-clay-dark@1x.png");
+    background-position: 50% 70%;
+    background-size: 100%;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min--moz-device-pixel-ratio: 2),
+      only screen and (-o-min-device-pixel-ratio: 2/1),
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/work/omnifood-clay-dark@2x.png");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 3),
+      only screen and (min--moz-device-pixel-ratio: 3),
+      only screen and (-o-min-device-pixel-ratio: 3/1),
+      only screen and (min-device-pixel-ratio: 3),
+      only screen and (min-resolution: 288dpi),
+      only screen and (min-resolution: 3dppx) {
+      background-image: url("../assets/work/omnifood-clay-dark@3x.png");
+    }
+  }
+
+  &-nexter-dark {
+    background-color: #101d2c;
+    background-image: url("../assets/work/nexter-clay-dark@1x.png");
+    background-position: 40% 70%;
+    background-size: 75%;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min--moz-device-pixel-ratio: 2),
+      only screen and (-o-min-device-pixel-ratio: 2/1),
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/work/nexter-clay-dark@2x.png");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 3),
+      only screen and (min--moz-device-pixel-ratio: 3),
+      only screen and (-o-min-device-pixel-ratio: 3/1),
+      only screen and (min-device-pixel-ratio: 3),
+      only screen and (min-resolution: 288dpi),
+      only screen and (min-resolution: 3dppx) {
+      background-image: url("../assets/work/nexter-clay-dark@3x.png");
+    }
+
+    @include respond(tab-port) {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &-trillo-dark {
+    background-color: #eb2f64;
+    background-image: url("../assets/work/trillo-clay-dark@1x.png");
+    background-position: 200% 70%;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min--moz-device-pixel-ratio: 2),
+      only screen and (-o-min-device-pixel-ratio: 2/1),
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/work/trillo-clay-dark@2x.png");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 3),
+      only screen and (min--moz-device-pixel-ratio: 3),
+      only screen and (-o-min-device-pixel-ratio: 3/1),
+      only screen and (min-device-pixel-ratio: 3),
+      only screen and (min-resolution: 288dpi),
+      only screen and (min-resolution: 3dppx) {
+      background-image: url("../assets/work/trillo-clay-dark@3x.png");
+    }
+  }
+
+  &-noticeboard-dark {
+    background-color: #1771ff;
+    background-image: url("../assets/work/noticeboard-clay-dark@1x.png");
+    background-position: 100% 70%;
+    background-size: 95%;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min--moz-device-pixel-ratio: 2),
+      only screen and (-o-min-device-pixel-ratio: 2/1),
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/work/noticeboard-clay-dark@2x.png");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 3),
+      only screen and (min--moz-device-pixel-ratio: 3),
+      only screen and (-o-min-device-pixel-ratio: 3/1),
+      only screen and (min-device-pixel-ratio: 3),
+      only screen and (min-resolution: 288dpi),
+      only screen and (min-resolution: 3dppx) {
+      background-image: url("../assets/work/noticeboard-clay-dark@3x.png");
     }
   }
 }

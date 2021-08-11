@@ -76,8 +76,6 @@ section {
     background-size: contain;
     padding: 20px 0;
 
-    background-position: -20% 0;
-
     @include respond(tab-land) {
       background-size: 10%;
     }
@@ -88,8 +86,6 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     padding: 20px 0;
-
-    background-position: 120% 0;
 
     @include respond(tab-land) {
       background-size: 10%;

@@ -18,29 +18,11 @@
       content="My name's Josh and I make websites. Need help with a website?"
     />
     <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="./assets/favicon/safari-pinned-tab.svg"
-      color="#2d81ff"
-    />
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#2d81ff" />
     <meta name="apple-mobile-web-app-title" content="Josh Dovey" />
     <meta name="application-name" content="Josh Dovey" />
     <meta name="msapplication-TileColor" content="#2b5797" />
@@ -64,7 +46,7 @@
     <meta property="og:image" content="./assets/favicon/favicon-32x32.png" />
     <!-- TODO: Set to live URL -->
     <!-- <link rel="canonical" href="https://joshdovey.co.uk" /> -->
-    <link rel="preload" href="/js/bundle.js" />
+    <link rel="preload" as="script" href="/js/bundle.js" />
   </head>
   <body>
     <div class="nav-bg" id="nav-box">
@@ -91,11 +73,9 @@
         <div class="header-text-box">
           <h1>
             Freelance Web Developer
-            <span
-              >I turn ideas into user-friendly websites that get results.</span
-            >
+            <span>I turn ideas into user-friendly websites that get results.</span>
           </h1>
-          <a href="#portfolio" class="btn btn-white fade-in">View My Work</a>
+          <a href="#work" class="btn btn-white fade-in">View My Work</a>
         </div>
       </div>
     </header>
@@ -119,12 +99,12 @@
           <div class="col-1-of-2">
             <h3>Responsive Design</h3>
             <p class="services-p">
-              Over 50% of the web is viewed on mobile devices! It's essential
-              then that your site is compatible with multiple screen sizes.
+              Over 50% of the web is viewed on mobile devices! It's essential then that your site is
+              compatible with multiple screen sizes.
             </p>
             <p class="services-p">
-              Your website will look great and work consistently from a giant 4k
-              monitor to a small smartphone!
+              Your website will look great and work consistently from a giant 4k monitor to a small
+              smartphone!
             </p>
           </div>
           <div class="col-1-of-2 mobile-hide">
@@ -171,14 +151,13 @@
               by 103%!
             </p>
             <p class="services-p">
-              My job is to eliminate that problem and increase the number of
-              visitors to your site.
+              My job is to eliminate that problem and increase the number of visitors to your site.
             </p>
           </div>
         </div>
       </div>
-      <div class="services-bg services-bg-right js-services-bg-3">
-        <div class="row services-3 js-services-3">
+      <div class="services-bg services-bg-right hidden-bg-1">
+        <div class="row hidden-fade-left">
           <div class="col-1-of-2 mobile-show">
             <img
               loading="lazy"
@@ -192,13 +171,12 @@
           <div class="col-1-of-2">
             <h3>SEO</h3>
             <p class="services-p">
-              Have you ever searched through the 709,000,000 google results? I
-              doubt it! That's why it's imperative that visistors find your site
-              with ease.
+              Have you ever searched through the 709,000,000 google results? I doubt it! That's why
+              it's imperative that visistors find your site with ease.
             </p>
             <p class="services-p">
-              I'll use the best and latest seo techniques to get your website at
-              the top of search engine results!
+              I'll use the best and latest seo techniques to get your website at the top of search
+              engine results!
             </p>
           </div>
           <div class="col-1-of-2 mobile-hide">
@@ -213,8 +191,8 @@
           </div>
         </div>
       </div>
-      <div class="services-bg services-bg-left js-services-bg-4">
-        <div class="row services-4 js-services-4">
+      <div class="services-bg services-bg-left hidden-bg-2">
+        <div class="row hidden-fade-right">
           <div class="col-1-of-2">
             <img
               loading="lazy"
@@ -228,14 +206,13 @@
           <div class="col-1-of-2">
             <h3>Maintenance</h3>
             <p class="services-p">
-              Want to freshen up your website? Maybe some SEO checks or
-              performance optimizations? Like anything, to keep a website
-              running smoothly, regular checks are vital to get the most out of
-              it.
+              Want to freshen up your website? Maybe some SEO checks or performance optimizations?
+              Like anything, to keep a website running smoothly, regular checks are vital to get the
+              most out of it.
             </p>
             <p class="services-p">
-              Need a few small updates? Or a complete makeover? Whatever it is
-              let me know. I would love to help!
+              Need a few small updates? Or a complete makeover? Whatever it is let me know. I would
+              love to help!
             </p>
           </div>
         </div>
@@ -245,253 +222,67 @@
     <!-- Concept 2 -->
     <section class="work" id="work">
       <div class="row align-left">
-        <h2 class="h2 js-portfolio-heading" id="js-project-name">Work</h2>
-        <hr class="h2-hr" id="js-portfolio-hr" />
+        <h2 class="h2 hidden-fade-right">Work</h2>
+        <hr class="h2-hr hidden-extend" />
       </div>
 
       <div class="row">
         <div class="col-1-of-2">
-          <a href="#" class="project-box project-box-portfolio hidden">
+          <a href="#" class="project-box project-box-portfolio hidden-fade" id="js-portfolio">
             <h3 class="project-name">Portfolio</h3>
             <h4>Showcase of my developer skills</h4>
           </a>
 
-          <a href="#" class="project-box project-box-trillo hidden">
+          <a href="#" class="project-box project-box-trillo hidden-fade" id="js-trillo">
             <h3 class="project-name">Trillo</h3>
             <h4>CSS Flexible Box Layout</h4>
           </a>
 
-          <a href="#" class="project-box project-box-nexter hidden">
+          <a href="#" class="project-box project-box-nexter hidden-fade" id="js-nexter">
             <h3 class="project-name">Nexter</h3>
             <h4>CSS Grid Layout</h4>
           </a>
         </div>
 
         <div class="col-1-of-2 project-right-col-margin">
-          <a href="#" class="project-box project-box-natours hidden">
+          <a href="#" class="project-box project-box-natours hidden-fade" id="js-natours">
             <h3 class="project-name">Natours</h3>
             <h4>Responsive SASS design</h4>
           </a>
 
-          <a href="#" class="project-box project-box-omnifood hidden">
+          <a href="#" class="project-box project-box-omnifood hidden-fade" id="js-omnifood">
             <h3 class="project-name">Omnifood</h3>
             <h4>Clean HTML & CSS site</h4>
           </a>
 
-          <a href="#" class="project-box project-box-noticeboard hidden">
+          <a href="#" class="project-box project-box-noticeboard hidden-fade" id="js-noticeboard">
             <h3 class="project-name">Notice Board</h3>
             <h4>Secure React & Node PWA</h4>
           </a>
         </div>
       </div>
     </section>
-
-    <!-- <div class="project-overview-bg" id="js-project-overview-bg">
-      <div class="row project-overview-box">
-        <div class="col-1-of-2 full-height">
-          <h3 class="project-overview-name" id="js-project-overview-name">
-            Portfolio
-          </h3>
-          <img
-            class="project-overview-img"
-            src="./assets/work/portfolio-overview.png"
-            alt=""
-            id="js-project-overview-img"
-          />
-        </div>
-        <div class="col-1-of-2 full-height">
-          <button class="project-overview-back" id="js-project-back">
-            <img
-              class="project-overview-back-img"
-              src="./assets/close-outline.svg"
-              alt="Back button"
-            />
-          </button>
-          <div class="project-overview">
-            <div>
-              <h4>Description</h4>
-              <p
-                class="project-overview-description"
-                id="js-project-description-1"
-              >
-                I designed my portfolio with the goal of being eye-catching,
-                informative and persuasive. As I developed my skills, I learnt
-                new techniques, and I wanted to implement them straight away.
-              </p>
-              <p
-                class="project-overview-description"
-                id="js-project-description-2"
-              >
-                This included, responsive design, search engine optimization,
-                page speed optimization and much more.
-              </p>
-            </div>
-
-            <div class="project-techs">
-              <ul id="js-project-techs">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>SEO</li>
-              </ul>
-            </div>
-
-            <div class="project-overview-btns">
-              <a href="#" class="btn btn-blue" id="js-project-visit">Visit</a>
-              <a href="#" class="btn btn-blue" id="js-project-code">Code</a>
-            </div>
-          </div> 
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Concept 1 -->
-    <!-- <section class="portfolio" id="projects">
-      <div class="row align-left">
-        <h2 class="h2 js-portfolio-heading" id="js-project-name">Work</h2>
-        <hr class="h2-hr" id="js-portfolio-hr" />
-      </div>
-      <div class="row project-showcase-div js-project-list">
-        <div class="col-1-of-3 project-container">
-          <div class="project-img-container" id="js-portfolio-1">
-            <img
-              loading="lazy"
-              src="./assets/portfolio.png"
-              alt="Portfolio Project"
-              class="project-img js-project-1"
-              height="200"
-              width="350"
-            />
-            <noscript class="noscript-project-container">
-              <a
-                class="noscript-project-link"
-                href="https://joshdovey.co.uk"
-                target="_blank"
-                rel="noopener noreferrer"
-              ></a>
-            </noscript>
-          </div>
-          <h4 id="js-project-1-title">Portfolio</h4>
-        </div>
-        <div class="col-1-of-3 project-container">
-          <div class="project-img-container" id="js-portfolio-2">
-            <img
-              loading="lazy"
-              src="./assets/natours.png"
-              alt="Natours Project"
-              class="project-img js-project-2"
-              height="200"
-              width="350"
-            />
-            <noscript class="noscript-project-container">
-              <a
-                class="noscript-project-link"
-                href="https://github.com/Josh-Dovey/Natours"
-                target="_blank"
-                rel="noopener noreferrer"
-              ></a>
-            </noscript>
-          </div>
-          <h4 id="js-project-2-title">Natours</h4>
-        </div>
-        <div class="col-1-of-3 project-container">
-          <div class="project-img-container" id="js-portfolio-3">
-            <img
-              loading="lazy"
-              src="./assets/noticeboard.png"
-              alt="Notice Board Project"
-              class="project-img js-project-3"
-              height="200"
-              width="350"
-            />
-            <noscript class="noscript-project-container">
-              <a
-                class="noscript-project-link"
-                href="https://kidderminster-kh-notice-board.herokuapp.com/home"
-                target="_blank"
-                rel="noopener noreferrer"
-              ></a>
-            </noscript>
-          </div>
-          <h4 id="js-project-3-title">Notice Board</h4>
-        </div>
-      </div>
-      <div class="row project-info-div js-project-info-div">
-        <div class="col-1-of-2 project-info-img-container">
-          <button class="project-info-back js-project-back">
-            <img
-              loading="lazy"
-              src="./assets/chevron-back.svg"
-              alt="Back Arrow Icon"
-              width="32"
-              height="32"
-            />
-            Back
-          </button>
-          <img
-            loading="lazy"
-            src="./assets/portfolio-mobile.jpg"
-            alt="Portfolio Info Page"
-            class="project-info-img"
-            id="js-project-img"
-          />
-        </div>
-        <div class="col-1-of-2 project-info">
-          <h4>Description</h4>
-          <p id="js-project-p1">
-            This one took me a while. But as I was learning new techniques, I
-            wanted to implement them straight away in my own designs. And as
-            this site is giving you a glimpse into my skills, it was kind of
-            important that I understood what I was doing.
-          </p>
-          <p id="js-project-p2">
-            This one took me a while. But as I was learning new techniques, I
-            wanted to implement them straight away in my own designs. And as
-            this site is giving you a glimpse into my skills, it was kind of
-            important that I understood what I was doing.
-          </p>
-          <div class="project-info-btns">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-blue"
-              id="js-project-visit"
-              >Visit</a
-            >
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-blue"
-              id="js-project-code"
-              >Code</a
-            >
-          </div>
-        </div>
-      </div>
-    </section> -->
     <section class="contact" id="contact">
       <div class="row align-right">
-        <h2 class="h2 js-contact-heading">Contact</h2>
-        <hr class="h2-hr" id="js-contact-hr" />
+        <h2 class="h2 hidden-fade-left">Contact</h2>
+        <hr class="h2-hr hidden-extend" />
       </div>
       <form method="post" action="mailer.php" class="form" id="form">
         <div class="row row-contact">
-          <div class="col-1-of-3 input-1 js-input-1">
+          <div class="col-1-of-3 hidden">
             <label for="name" class="form-label">Name</label>
             <input type="text" name="name" id="name" class="form-input" />
           </div>
-          <div class="col-1-of-3 input-2 js-input-2">
+          <div class="col-1-of-3 hidden">
             <label for="email" class="form-label">Email</label>
             <input type="email" name="email" id="email" class="form-input" />
           </div>
-          <div class="col-1-of-3 input-3 js-input-3">
+          <div class="col-1-of-3 hidden">
             <label for="number" class="form-label">Number</label>
             <input type="tel" name="number" id="number" class="form-input" />
           </div>
         </div>
-        <div class="row row-textarea input-4 js-input-4">
+        <div class="row row-textarea hidden">
           <label for="message" class="form-label">Message</label>
           <textarea
             name="message"
@@ -502,13 +293,8 @@
           ></textarea>
         </div>
         <div class="row">
-          <div class="col-1-of-2 input-5 js-input-5">
-            <input
-              type="submit"
-              class="btn btn-blue btn-form"
-              id="form-btn"
-              value="Submit"
-            />
+          <div class="col-1-of-2 hidden">
+            <input type="submit" class="btn btn-blue btn-form" id="form-btn" value="Submit" />
           </div>
           <div class="col-1-of-2">
             <p class="form-message" id="form-msg"></p>
@@ -527,9 +313,7 @@
           </ul>
         </div>
         <div class="col-1-of-3 footer-theme-box">
-          <button class="btn btn-theme" id="js-theme-switch">
-            Switch Theme
-          </button>
+          <button class="btn btn-theme" id="js-theme-switch">Switch Theme</button>
         </div>
         <div class="col-1-of-3 stuff">
           <h4>Stuff...</h4>
@@ -537,10 +321,7 @@
         </div>
       </div>
     </footer>
-    <script src="./js/onscreen.js" defer></script>
-    <script src="./js/script.js" defer></script>
-    <noscript class="noscript-advisory"
-      >Please enable Javascript for a better experience</noscript
-    >
+    <script src="./js/bundle.js" defer></script>
+    <noscript class="noscript-advisory">Please enable Javascript for a better experience</noscript>
   </body>
 </html>
