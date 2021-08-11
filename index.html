@@ -10,8 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <noscript> <link rel="Stylesheet" href="css/noscript.css" /> </noscript>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <noscript> <link rel="Stylesheet" href="./css/noscript.css" /> </noscript>
     <title>Web Developer | Josh Dovey</title>
     <meta
       name="description"
@@ -21,24 +21,24 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
+      href="./assets/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/favicon/favicon-32x32.png"
+      href="./assets/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="assets/favicon/favicon-16x16.png"
+      href="./assets/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
     <link
       rel="mask-icon"
-      href="assets/favicon/safari-pinned-tab.svg"
+      href="./assets/favicon/safari-pinned-tab.svg"
       color="#2d81ff"
     />
     <meta name="apple-mobile-web-app-title" content="Josh Dovey" />
@@ -71,11 +71,14 @@
       <nav class="nav">
         <p class="logo">Joshua Dovey</p>
         <ul class="nav-list">
+          <!-- <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li> -->
           <li class="nav-item">
             <a href="#services" class="nav-link">Services</a>
           </li>
           <li class="nav-item">
-            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#work" class="nav-link">Work</a>
           </li>
           <li class="nav-item">
             <a href="#contact" class="nav-link">Contact</a>
@@ -89,21 +92,20 @@
           <h1>
             Freelance Web Developer
             <span
-              >I create user-friendly interfaces that help businesses
-              flourish</span
+              >I turn ideas into user-friendly websites that get results.</span
             >
           </h1>
-          <a href="#portfolio" class="btn btn-white fade-in">View Portfolio</a>
+          <a href="#portfolio" class="btn btn-white fade-in">View My Work</a>
         </div>
       </div>
     </header>
     <section class="services" id="services">
       <div class="row align-right">
-        <h2 class="h2 js-services-heading">Services</h2>
-        <hr class="h2-hr" id="js-services-hr" />
+        <h2 class="h2 js-services-heading hidden-fade-left">Services</h2>
+        <hr class="h2-hr hidden-extend" id="js-services-hr" />
       </div>
-      <div class="services-bg services-bg-right js-services-bg-1">
-        <div class="row services-1 js-services-1">
+      <div class="services-bg services-bg-right hidden-bg-1">
+        <div class="row hidden-fade-left">
           <div class="col-1-of-2 mobile-show">
             <img
               loading="lazy"
@@ -137,8 +139,8 @@
           </div>
         </div>
       </div>
-      <div class="services-bg services-bg-left js-services-bg-2">
-        <div class="row services-2 js-services-2">
+      <div class="services-bg services-bg-left hidden-bg-2">
+        <div class="row hidden-fade-right">
           <div class="col-1-of-2">
             <img
               loading="lazy"
@@ -239,9 +241,114 @@
         </div>
       </div>
     </section>
-    <section class="portfolio" id="portfolio">
+
+    <!-- Concept 2 -->
+    <section class="work" id="work">
       <div class="row align-left">
-        <h2 class="h2 js-portfolio-heading" id="js-project-name">Portfolio</h2>
+        <h2 class="h2 js-portfolio-heading" id="js-project-name">Work</h2>
+        <hr class="h2-hr" id="js-portfolio-hr" />
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-2">
+          <a href="#" class="project-box project-box-portfolio hidden">
+            <h3 class="project-name">Portfolio</h3>
+            <h4>Showcase of my developer skills</h4>
+          </a>
+
+          <a href="#" class="project-box project-box-trillo hidden">
+            <h3 class="project-name">Trillo</h3>
+            <h4>CSS Flexible Box Layout</h4>
+          </a>
+
+          <a href="#" class="project-box project-box-nexter hidden">
+            <h3 class="project-name">Nexter</h3>
+            <h4>CSS Grid Layout</h4>
+          </a>
+        </div>
+
+        <div class="col-1-of-2 project-right-col-margin">
+          <a href="#" class="project-box project-box-natours hidden">
+            <h3 class="project-name">Natours</h3>
+            <h4>Responsive SASS design</h4>
+          </a>
+
+          <a href="#" class="project-box project-box-omnifood hidden">
+            <h3 class="project-name">Omnifood</h3>
+            <h4>Clean HTML & CSS site</h4>
+          </a>
+
+          <a href="#" class="project-box project-box-noticeboard hidden">
+            <h3 class="project-name">Notice Board</h3>
+            <h4>Secure React & Node PWA</h4>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="project-overview-bg" id="js-project-overview-bg">
+      <div class="row project-overview-box">
+        <div class="col-1-of-2 full-height">
+          <h3 class="project-overview-name" id="js-project-overview-name">
+            Portfolio
+          </h3>
+          <img
+            class="project-overview-img"
+            src="./assets/work/portfolio-overview.png"
+            alt=""
+            id="js-project-overview-img"
+          />
+        </div>
+        <div class="col-1-of-2 full-height">
+          <button class="project-overview-back" id="js-project-back">
+            <img
+              class="project-overview-back-img"
+              src="./assets/close-outline.svg"
+              alt="Back button"
+            />
+          </button>
+          <div class="project-overview">
+            <div>
+              <h4>Description</h4>
+              <p
+                class="project-overview-description"
+                id="js-project-description-1"
+              >
+                I designed my portfolio with the goal of being eye-catching,
+                informative and persuasive. As I developed my skills, I learnt
+                new techniques, and I wanted to implement them straight away.
+              </p>
+              <p
+                class="project-overview-description"
+                id="js-project-description-2"
+              >
+                This included, responsive design, search engine optimization,
+                page speed optimization and much more.
+              </p>
+            </div>
+
+            <div class="project-techs">
+              <ul id="js-project-techs">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>SEO</li>
+              </ul>
+            </div>
+
+            <div class="project-overview-btns">
+              <a href="#" class="btn btn-blue" id="js-project-visit">Visit</a>
+              <a href="#" class="btn btn-blue" id="js-project-code">Code</a>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Concept 1 -->
+    <!-- <section class="portfolio" id="projects">
+      <div class="row align-left">
+        <h2 class="h2 js-portfolio-heading" id="js-project-name">Work</h2>
         <hr class="h2-hr" id="js-portfolio-hr" />
       </div>
       <div class="row project-showcase-div js-project-list">
@@ -314,7 +421,7 @@
           <button class="project-info-back js-project-back">
             <img
               loading="lazy"
-              src="https://s2.svgbox.net/octicons.svg?color=2d81ff&ic=chevron-left-bold"
+              src="./assets/chevron-back.svg"
               alt="Back Arrow Icon"
               width="32"
               height="32"
@@ -363,7 +470,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="contact" id="contact">
       <div class="row align-right">
         <h2 class="h2 js-contact-heading">Contact</h2>
@@ -430,8 +537,8 @@
         </div>
       </div>
     </footer>
-    <script src="js/onscreen.js" defer></script>
-    <script src="js/bundle.js" defer></script>
+    <script src="./js/onscreen.js" defer></script>
+    <script src="./js/script.js" defer></script>
     <noscript class="noscript-advisory"
       >Please enable Javascript for a better experience</noscript
     >

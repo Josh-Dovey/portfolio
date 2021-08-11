@@ -9,7 +9,7 @@
 
 @keyframes fade-in-up {
   0% {
-    transform: translateY(25px);
+    transform: translateY(30px);
     opacity: 0;
   }
   100% {
@@ -18,14 +18,22 @@
   }
 }
 
-@keyframes fade-in-left {
+@keyframes fade-up {
   0% {
-    transform: translateX(25px);
-    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(30px);
   }
   100% {
     transform: translateX(0px);
-    opacity: 1;
   }
 }
 
@@ -60,7 +68,7 @@
   }
 }
 
-@keyframes background-slide-left {
+@keyframes bg-slide-left {
   0% {
     background-position: 120% 0;
   }
@@ -69,7 +77,7 @@
   }
 }
 
-@keyframes background-slide-right {
+@keyframes bg-slide-right {
   0% {
     background-position: -20% 0;
   }
@@ -78,75 +86,31 @@
   }
 }
 
-.hr-animate {
-  animation: extend 0.6s ease 0.45s forwards;
+.fade-right-element {
+  animation: fade-left 0.4s ease-out forwards;
 }
 
-.heading-2-animate-left {
-  animation: fade-in-left 0.4s ease-out 0.1s forwards;
-}
+// .heading-2-animate-left {
+//   animation: fade-in-left 0.4s ease-out 0.1s forwards;
+// }
 
-.heading-2-animate-right {
-  animation: fade-in-right 0.4s ease 0.1s forwards;
-}
+// .heading-2-animate-right {
+//   animation: fade-in-right 0.4s ease 0.1s forwards;
+// }
 
 // Services Animations
-.services-bg-left-animate {
-  animation: background-slide-left 0.4s ease 0.1s forwards;
-}
 
-.services-bg-right-animate {
+.bg-right-animate {
   animation: background-slide-right 0.4s ease 0.1s forwards;
 }
 
-.services-fade-left {
-  animation: fade-in-left 0.4s ease 0.1s forwards;
-}
+// .services-fade-left {
+//   animation: fade-in-left 0.4s ease 0.1s forwards;
+// }
 
-.services-fade-right {
-  animation: fade-in-right 0.4s ease 0.1s forwards;
-}
-
-// Portfolio Animations
-.project-1-animate {
-  animation: fade-in-scale 0.4s ease 0.1s forwards;
-}
-
-.project-1-title-animate {
-  animation: fade-in 0.4s ease 0.15s forwards;
-}
-
-.project-2-animate {
-  animation: fade-in-scale 0.4s ease 0.3s forwards;
-
-  @include respond(tab-port) {
-    animation-delay: 0.1s;
-  }
-}
-
-.project-2-title-animate {
-  animation: fade-in 0.4s ease 0.35s forwards;
-
-  @include respond(tab-port) {
-    animation-delay: 0.15s;
-  }
-}
-
-.project-3-animate {
-  animation: fade-in-scale 0.4s ease 0.5s forwards;
-
-  @include respond(tab-port) {
-    animation-delay: 0.1s;
-  }
-}
-
-.project-3-title-animate {
-  animation: fade-in 0.4s ease 0.55s forwards;
-
-  @include respond(tab-port) {
-    animation-delay: 0.15s;
-  }
-}
+// .services-fade-right {
+//   animation: fade-in-right 0.4s ease 0.1s forwards;
+// }
 
 // Contact Animations
 .input-1-fade-up {
@@ -179,4 +143,45 @@
   @include respond(tab-port) {
     animation-delay: 0.1s;
   }
+}
+
+// Portfolio
+.fade-up-element {
+  animation: fade-up 0.4s ease-out forwards;
+}
+
+.fade-left {
+  animation: fade-left 0.4s ease-out forwards;
+}
+
+.extend {
+  animation: extend 0.6s ease forwards;
+}
+
+.bg-left {
+  animation: bg-slide-left 0.4s ease forwards;
+}
+
+.bg-right {
+  animation: bg-slide-right 0.4s ease forwards;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.hidden-fade-left {
+  opacity: 0;
+}
+
+.hidden-extend {
+  width: 0;
+}
+
+.hidden-bg-1 {
+  background-position: 120% 0;
+}
+
+.hidden-bg-2 {
+  background-position: -20% 0;
 }
