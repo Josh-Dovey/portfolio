@@ -14,21 +14,27 @@
 
 @keyframes fade-up {
   0% {
-    transform: translateY(30px); }
+    transform: translateY(30px);
+    opacity: 0; }
   100% {
-    transform: translateY(0); } }
+    transform: translateY(0);
+    opacity: 1; } }
 
 @keyframes fade-left {
   0% {
-    transform: translateX(30px); }
+    transform: translateX(30px);
+    opacity: 0; }
   100% {
-    transform: translateX(0px); } }
+    transform: translateX(0px);
+    opacity: 1; } }
 
 @keyframes fade-right {
   0% {
-    transform: translateX(-30px); }
+    transform: translateX(-30px);
+    opacity: 0; }
   100% {
-    transform: translateX(0px); } }
+    transform: translateX(0px);
+    opacity: 1; } }
 
 @keyframes fade-in-scale {
   0% {
@@ -94,6 +100,14 @@
 
 .bg-right {
   animation: bg-slide-right 0.4s ease forwards; }
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: scale(2); } }
 
 .row {
   max-width: 114rem;
@@ -236,7 +250,7 @@ h4 {
   cursor: pointer;
   font-family: inherit;
   padding: 2rem 6rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   display: inline-block;
   text-decoration: none;
@@ -348,7 +362,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 114rem;
+  max-width: 1140px;
   min-width: 300px;
   width: 90%;
   margin: 0 auto; }
@@ -567,22 +581,6 @@ section {
     .mobile-hide {
       display: none; } }
 
-.services-1 {
-  transform: translateX(25px);
-  opacity: 0; }
-
-.services-2 {
-  transform: translateX(-25px);
-  opacity: 0; }
-
-.services-3 {
-  transform: translateX(25px);
-  opacity: 0; }
-
-.services-4 {
-  transform: translateX(-25px);
-  opacity: 0; }
-
 .project-name {
   margin-bottom: 5px; }
 
@@ -618,138 +616,138 @@ section {
     font-size: 16px; }
   .project-box-natours {
     background-color: #55c57a;
-    background-image: url("../assets/work/natours-clay@1x.png");
+    background-image: url("../assets/webp/natours-clay@1x.webp");
     background-position: 200% 60%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-natours {
-        background-image: url("../assets/work/natours-clay@2x.png"); } }
+        background-image: url("../assets/webp/natours-clay@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-natours {
-        background-image: url("../assets/work/natours-clay@3x.png"); } }
+        background-image: url("../assets/webp/natours-clay@3x.webp"); } }
   .project-box-portfolio {
     background-color: #2781ff;
     background-color: var(--main);
-    background-image: url("../assets/work/portfolio-clay@1x.png");
+    background-image: url("../assets/webp/portfolio-clay@1x.webp");
     background-position: -150% 65%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-portfolio {
-        background-image: url("../assets/work/portfolio-clay@2x.png"); } }
+        background-image: url("../assets/webp/portfolio-clay@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-portfolio {
-        background-image: url("../assets/work/portfolio-clay@3x.png"); } }
+        background-image: url("../assets/webp/portfolio-clay@3x.webp"); } }
   .project-box-omnifood {
     background-color: #e67e22;
-    background-image: url("../assets/work/omnifood-clay@1x.png");
+    background-image: url("../assets/webp/omnifood-clay@1x.webp");
     background-position: 50% 70%;
     background-size: 100%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-omnifood {
-        background-image: url("../assets/work/omnifood-clay@2x.png"); } }
+        background-image: url("../assets/webp/omnifood-clay@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-omnifood {
-        background-image: url("../assets/work/omnifood-clay@3x.png"); } }
+        background-image: url("../assets/webp/omnifood-clay@3x.webp"); } }
   .project-box-nexter {
     background-color: #101d2c;
-    background-image: url("../assets/work/nexter-clay@1x.png");
+    background-image: url("../assets/webp/nexter-clay@1x.webp");
     background-position: 40% 70%;
     background-size: 75%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-nexter {
-        background-image: url("../assets/work/nexter-clay@2x.png"); } }
+        background-image: url("../assets/webp/nexter-clay@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-nexter {
-        background-image: url("../assets/work/nexter-clay@3x.png"); } }
+        background-image: url("../assets/webp/nexter-clay@3x.webp"); } }
     @media only screen and (max-width: 56.25em) {
       .project-box-nexter {
         margin-bottom: 0 !important; } }
   .project-box-trillo {
     background-color: #eb2f64;
-    background-image: url("../assets/work/trillo-clay@1x.png");
+    background-image: url("../assets/webp/trillo-clay@1x.webp");
     background-position: 200% 70%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-trillo {
-        background-image: url("../assets/work/trillo-clay@2x.png"); } }
+        background-image: url("../assets/webp/trillo-clay@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-trillo {
-        background-image: url("../assets/work/trillo-clay@3x.png"); } }
+        background-image: url("../assets/webp/trillo-clay@3x.webp"); } }
   .project-box-noticeboard {
     background-color: #1771ff;
-    background-image: url("../assets/work/noticeboard-clay@1x.png");
+    background-image: url("../assets/webp/noticeboard-clay@1x.webp");
     background-position: 100% 70%;
     background-size: 105%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-noticeboard {
-        background-image: url("../assets/work/noticeboard-clay@2x.png"); } }
+        background-image: url("../assets/webp/noticeboard-clay@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-noticeboard {
-        background-image: url("../assets/work/noticeboard-clay@3x.png"); } }
+        background-image: url("../assets/webp/noticeboard-clay@3x.webp"); } }
   .project-box-natours-dark {
     background-color: #55c57a;
-    background-image: url("../assets/work/natours-clay-dark@1x.png");
+    background-image: url("../assets/webp/natours-clay-dark@1x.webp");
     background-position: 200% 60%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-natours-dark {
-        background-image: url("../assets/work/natours-clay-dark@2x.png"); } }
+        background-image: url("../assets/webp/natours-clay-dark@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-natours-dark {
-        background-image: url("../assets/work/natours-clay-dark@3x.png"); } }
+        background-image: url("../assets/webp/natours-clay-dark@3x.webp"); } }
   .project-box-portfolio-dark {
     background-color: #2781ff;
     background-color: var(--main);
-    background-image: url("../assets/work/portfolio-clay-dark@1x.png");
+    background-image: url("../assets/webp/portfolio-clay-dark@1x.webp");
     background-position: -150% 65%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-portfolio-dark {
-        background-image: url("../assets/work/portfolio-clay-dark@2x.png"); } }
+        background-image: url("../assets/webp/portfolio-clay-dark@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-portfolio-dark {
-        background-image: url("../assets/work/portfolio-clay-dark@3x.png"); } }
+        background-image: url("../assets/webp/portfolio-clay-dark@3x.webp"); } }
   .project-box-omnifood-dark {
     background-color: #e67e22;
-    background-image: url("../assets/work/omnifood-clay-dark@1x.png");
+    background-image: url("../assets/webp/omnifood-clay-dark@1x.webp");
     background-position: 50% 70%;
     background-size: 100%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-omnifood-dark {
-        background-image: url("../assets/work/omnifood-clay-dark@2x.png"); } }
+        background-image: url("../assets/webp/omnifood-clay-dark@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-omnifood-dark {
-        background-image: url("../assets/work/omnifood-clay-dark@3x.png"); } }
+        background-image: url("../assets/webp/omnifood-clay-dark@3x.webp"); } }
   .project-box-nexter-dark {
     background-color: #101d2c;
-    background-image: url("../assets/work/nexter-clay-dark@1x.png");
+    background-image: url("../assets/webp/nexter-clay-dark@1x.webp");
     background-position: 40% 70%;
     background-size: 75%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-nexter-dark {
-        background-image: url("../assets/work/nexter-clay-dark@2x.png"); } }
+        background-image: url("../assets/webp/nexter-clay-dark@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-nexter-dark {
-        background-image: url("../assets/work/nexter-clay-dark@3x.png"); } }
+        background-image: url("../assets/webp/nexter-clay-dark@3x.webp"); } }
     @media only screen and (max-width: 56.25em) {
       .project-box-nexter-dark {
         margin-bottom: 0 !important; } }
   .project-box-trillo-dark {
     background-color: #eb2f64;
-    background-image: url("../assets/work/trillo-clay-dark@1x.png");
+    background-image: url("../assets/webp/trillo-clay-dark@1x.webp");
     background-position: 200% 70%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-trillo-dark {
-        background-image: url("../assets/work/trillo-clay-dark@2x.png"); } }
+        background-image: url("../assets/webp/trillo-clay-dark@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-trillo-dark {
-        background-image: url("../assets/work/trillo-clay-dark@3x.png"); } }
+        background-image: url("../assets/webp/trillo-clay-dark@3x.webp"); } }
   .project-box-noticeboard-dark {
     background-color: #1771ff;
-    background-image: url("../assets/work/noticeboard-clay-dark@1x.png");
+    background-image: url("../assets/webp/noticeboard-clay-dark@1x.webp");
     background-position: 100% 70%;
     background-size: 95%; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .project-box-noticeboard-dark {
-        background-image: url("../assets/work/noticeboard-clay-dark@2x.png"); } }
+        background-image: url("../assets/webp/noticeboard-clay-dark@2x.webp"); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
       .project-box-noticeboard-dark {
-        background-image: url("../assets/work/noticeboard-clay-dark@3x.png"); } }
+        background-image: url("../assets/webp/noticeboard-clay-dark@3x.webp"); } }
 
 .project-right-col-margin {
   margin-top: 20rem; }
@@ -814,21 +812,67 @@ section {
 .error {
   color: #b50000; }
 
-.input-1 {
-  transform: translateY(25px);
-  opacity: 0; }
+.contact-details-box {
+  text-align: right; }
+  @media only screen and (max-width: 56.25em) {
+    .contact-details-box {
+      text-align: center; } }
 
-.input-2 {
-  transform: translateY(25px);
-  opacity: 0; }
+.contact-mail:link, .contact-mail:visited {
+  color: #000;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 2rem;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: color 0.4s; }
 
-.input-3 {
-  transform: translateY(25px);
-  opacity: 0; }
+.contact-mail:hover::before {
+  max-width: 100%; }
 
-.input-4 {
-  transform: translateY(25px);
-  opacity: 0; }
+.contact-mail:hover {
+  color: #2781ff;
+  color: var(--main); }
 
-.input-5 {
-  opacity: 0; }
+.circle {
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  background-color: #2781ff;
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px; }
+  @media only screen and (max-width: 37.5em) {
+    .circle {
+      position: absolute;
+      top: 8px;
+      left: 7px; } }
+
+.pulse {
+  background-color: #2781ff;
+  background-color: var(--main);
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite; }
+
+.contact-availability {
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  font-size: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .contact-availability {
+      width: max-content;
+      margin: 0 auto; } }
+  @media only screen and (max-width: 37.5em) {
+    .contact-availability {
+      width: unset;
+      maring: 0;
+      text-align: center;
+      position: relative; } }

@@ -72,28 +72,81 @@
   color: #b50000;
 }
 
-.input {
-  &-1 {
-    transform: translateY(25px);
-    opacity: 0;
+.contact-details-box {
+  text-align: right;
+
+  @include respond(tab-port) {
+    text-align: center;
+  }
+}
+
+.contact-mail {
+  &:link,
+  &:visited {
+    color: #000;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: color 0.4s;
   }
 
-  &-2 {
-    transform: translateY(25px);
-    opacity: 0;
+  &:hover::before {
+    max-width: 100%;
   }
 
-  &-3 {
-    transform: translateY(25px);
-    opacity: 0;
+  &:hover {
+    color: #2781ff;
+    color: var(--main);
+  }
+}
+
+.circle {
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  background-color: #2781ff;
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+
+  @include respond(phone) {
+    position: absolute;
+    top: 8px;
+    left: 7px;
+  }
+}
+
+.pulse {
+  background-color: #2781ff;
+  background-color: var(--main);
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
+
+.contact-availability {
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+
+  @include respond(tab-port) {
+    width: max-content;
+    margin: 0 auto;
   }
 
-  &-4 {
-    transform: translateY(25px);
-    opacity: 0;
-  }
-
-  &-5 {
-    opacity: 0;
+  @include respond(phone) {
+    width: unset;
+    maring: 0;
+    text-align: center;
+    position: relative;
   }
 }

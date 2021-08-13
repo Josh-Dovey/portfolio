@@ -184,7 +184,7 @@
 
   &-natours {
     background-color: #55c57a;
-    background-image: url("../assets/work/natours-clay@1x.png");
+    background-image: url("../assets/webp/natours-clay@1x.webp");
     background-position: 200% 60%;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -193,7 +193,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/natours-clay@2x.png");
+      background-image: url("../assets/webp/natours-clay@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -202,14 +202,14 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/natours-clay@3x.png");
+      background-image: url("../assets/webp/natours-clay@3x.webp");
     }
   }
 
   &-portfolio {
     background-color: #2781ff;
     background-color: var(--main);
-    background-image: url("../assets/work/portfolio-clay@1x.png");
+    background-image: url("../assets/webp/portfolio-clay@1x.webp");
     background-position: -150% 65%;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -218,7 +218,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/portfolio-clay@2x.png");
+      background-image: url("../assets/webp/portfolio-clay@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -227,13 +227,13 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/portfolio-clay@3x.png");
+      background-image: url("../assets/webp/portfolio-clay@3x.webp");
     }
   }
 
   &-omnifood {
     background-color: #e67e22;
-    background-image: url("../assets/work/omnifood-clay@1x.png");
+    background-image: url("../assets/webp/omnifood-clay@1x.webp");
     background-position: 50% 70%;
     background-size: 100%;
 
@@ -243,7 +243,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/omnifood-clay@2x.png");
+      background-image: url("../assets/webp/omnifood-clay@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -252,13 +252,13 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/omnifood-clay@3x.png");
+      background-image: url("../assets/webp/omnifood-clay@3x.webp");
     }
   }
 
   &-nexter {
     background-color: #101d2c;
-    background-image: url("../assets/work/nexter-clay@1x.png");
+    background-image: url("../assets/webp/nexter-clay@1x.webp");
     background-position: 40% 70%;
     background-size: 75%;
 
@@ -268,7 +268,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/nexter-clay@2x.png");
+      background-image: url("../assets/webp/nexter-clay@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -277,7 +277,7 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/nexter-clay@3x.png");
+      background-image: url("../assets/webp/nexter-clay@3x.webp");
     }
 
     @include respond(tab-port) {
@@ -287,7 +287,7 @@
 
   &-trillo {
     background-color: #eb2f64;
-    background-image: url("../assets/work/trillo-clay@1x.png");
+    background-image: url("../assets/webp/trillo-clay@1x.webp");
     background-position: 200% 70%;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -296,7 +296,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/trillo-clay@2x.png");
+      background-image: url("../assets/webp/trillo-clay@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -305,13 +305,13 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/trillo-clay@3x.png");
+      background-image: url("../assets/webp/trillo-clay@3x.webp");
     }
   }
 
   &-noticeboard {
     background-color: #1771ff;
-    background-image: url("../assets/work/noticeboard-clay@1x.png");
+    background-image: url("../assets/webp/noticeboard-clay@1x.webp");
     background-position: 100% 70%;
     background-size: 105%;
 
@@ -321,7 +321,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/noticeboard-clay@2x.png");
+      background-image: url("../assets/webp/noticeboard-clay@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -330,14 +330,14 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/noticeboard-clay@3x.png");
+      background-image: url("../assets/webp/noticeboard-clay@3x.webp");
     }
   }
 
   // DARK
   &-natours-dark {
     background-color: #55c57a;
-    background-image: url("../assets/work/natours-clay-dark@1x.png");
+    background-image: url("../assets/webp/natours-clay-dark@1x.webp");
     background-position: 200% 60%;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -346,7 +346,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/natours-clay-dark@2x.png");
+      background-image: url("../assets/webp/natours-clay-dark@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -355,14 +355,14 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/natours-clay-dark@3x.png");
+      background-image: url("../assets/webp/natours-clay-dark@3x.webp");
     }
   }
 
   &-portfolio-dark {
     background-color: #2781ff;
     background-color: var(--main);
-    background-image: url("../assets/work/portfolio-clay-dark@1x.png");
+    background-image: url("../assets/webp/portfolio-clay-dark@1x.webp");
     background-position: -150% 65%;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -371,7 +371,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/portfolio-clay-dark@2x.png");
+      background-image: url("../assets/webp/portfolio-clay-dark@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -380,13 +380,13 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/portfolio-clay-dark@3x.png");
+      background-image: url("../assets/webp/portfolio-clay-dark@3x.webp");
     }
   }
 
   &-omnifood-dark {
     background-color: #e67e22;
-    background-image: url("../assets/work/omnifood-clay-dark@1x.png");
+    background-image: url("../assets/webp/omnifood-clay-dark@1x.webp");
     background-position: 50% 70%;
     background-size: 100%;
 
@@ -396,7 +396,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/omnifood-clay-dark@2x.png");
+      background-image: url("../assets/webp/omnifood-clay-dark@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -405,13 +405,13 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/omnifood-clay-dark@3x.png");
+      background-image: url("../assets/webp/omnifood-clay-dark@3x.webp");
     }
   }
 
   &-nexter-dark {
     background-color: #101d2c;
-    background-image: url("../assets/work/nexter-clay-dark@1x.png");
+    background-image: url("../assets/webp/nexter-clay-dark@1x.webp");
     background-position: 40% 70%;
     background-size: 75%;
 
@@ -421,7 +421,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/nexter-clay-dark@2x.png");
+      background-image: url("../assets/webp/nexter-clay-dark@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -430,7 +430,7 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/nexter-clay-dark@3x.png");
+      background-image: url("../assets/webp/nexter-clay-dark@3x.webp");
     }
 
     @include respond(tab-port) {
@@ -440,7 +440,7 @@
 
   &-trillo-dark {
     background-color: #eb2f64;
-    background-image: url("../assets/work/trillo-clay-dark@1x.png");
+    background-image: url("../assets/webp/trillo-clay-dark@1x.webp");
     background-position: 200% 70%;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -449,7 +449,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/trillo-clay-dark@2x.png");
+      background-image: url("../assets/webp/trillo-clay-dark@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -458,13 +458,13 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/trillo-clay-dark@3x.png");
+      background-image: url("../assets/webp/trillo-clay-dark@3x.webp");
     }
   }
 
   &-noticeboard-dark {
     background-color: #1771ff;
-    background-image: url("../assets/work/noticeboard-clay-dark@1x.png");
+    background-image: url("../assets/webp/noticeboard-clay-dark@1x.webp");
     background-position: 100% 70%;
     background-size: 95%;
 
@@ -474,7 +474,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/work/noticeboard-clay-dark@2x.png");
+      background-image: url("../assets/webp/noticeboard-clay-dark@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -483,7 +483,7 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/work/noticeboard-clay-dark@3x.png");
+      background-image: url("../assets/webp/noticeboard-clay-dark@3x.webp");
     }
   }
 }

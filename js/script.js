@@ -1,71 +1,86 @@
+const d = document;
+
 // Set theme depending on local storage
 if (localStorage.getItem("theme") === "dark") {
-  document.documentElement.style.setProperty("--bg", "#000");
-  document.documentElement.style.setProperty("--bg-2", "#0f0f0f");
-  document.documentElement.style.setProperty("--text", "#fff");
-  document.documentElement.style.setProperty("--input", "#151515");
-  // document.querySelector(".js-project-1").src = "./assets/portfolio-dark.jpg";
-  // document.querySelector(".js-project-2").src = "./assets/natours-dark.jpg";
-  // document.querySelector(".js-project-3").src = "./assets/noticeboard-dark.jpg";
-  document.documentElement.classList.add("dark");
+  d.documentElement.style.setProperty("--bg", "#000");
+  d.documentElement.style.setProperty("--bg-2", "#0f0f0f");
+  d.documentElement.style.setProperty("--text", "#fff");
+  d.documentElement.style.setProperty("--input", "#151515");
+  // Remove white project boxes
+  d.getElementById("js-portfolio").classList.remove("project-box-portfolio");
+  d.getElementById("js-natours").classList.remove("project-box-natours");
+  d.getElementById("js-trillo").classList.remove("project-box-trillo");
+  d.getElementById("js-omnifood").classList.remove("project-box-omnifood");
+  d.getElementById("js-nexter").classList.remove("project-box-nexter");
+  d.getElementById("js-noticeboard").classList.remove("project-box-noticeboard");
+
+  // Add dark project boxes
+  d.getElementById("js-portfolio").classList.add("project-box-portfolio-dark");
+  d.getElementById("js-natours").classList.add("project-box-natours-dark");
+  d.getElementById("js-trillo").classList.add("project-box-trillo-dark");
+  d.getElementById("js-omnifood").classList.add("project-box-omnifood-dark");
+  d.getElementById("js-nexter").classList.add("project-box-nexter-dark");
+  d.getElementById("js-noticeboard").classList.add("project-box-noticeboard-dark");
+  d.documentElement.classList.add("dark");
 }
 
 const waypoint = window.screen.availHeight,
-  navBox = document.getElementById("nav-box"),
+  navBox = d.getElementById("nav-box"),
   deviceWidth = window.screen.availWidth;
 900 > deviceWidth
   ? navBox.classList.add("nav-bg-fill")
-  : document.addEventListener("scroll", () => {
+  : d.addEventListener("scroll", () => {
       window.scrollY + 300 > waypoint
         ? navBox.classList.add("nav-bg-fill")
         : navBox.classList.remove("nav-bg-fill");
     });
-const themeBtn = document.getElementById("js-theme-switch");
+const themeBtn = d.getElementById("js-theme-switch");
 themeBtn.addEventListener("click", () => {
-  if (document.documentElement.classList.contains("dark")) {
-    document.documentElement.style.setProperty("--bg", "#fff"),
-      document.documentElement.style.setProperty("--bg-2", "#fff"),
-      document.documentElement.style.setProperty("--text", "#000"),
-      document.documentElement.style.setProperty("--input", "#fff"),
-      // Add white project boxes
-      document.getElementById("js-portfolio").classList.add("project-box-portfolio");
-    document.getElementById("js-natours").classList.add("project-box-natours");
-    document.getElementById("js-trillo").classList.add("project-box-trillo");
-    document.getElementById("js-omnifood").classList.add("project-box-omnifood");
-    document.getElementById("js-nexter").classList.add("project-box-nexter");
-    document.getElementById("js-noticeboard").classList.add("project-box-noticeboard");
+  if (d.documentElement.classList.contains("dark")) {
+    d.documentElement.style.setProperty("--bg", "#fff");
+    d.documentElement.style.setProperty("--bg-2", "#fff");
+    d.documentElement.style.setProperty("--text", "#000");
+    d.documentElement.style.setProperty("--input", "#fff");
+    // Add white project boxes
+    d.getElementById("js-portfolio").classList.add("project-box-portfolio");
+    d.getElementById("js-natours").classList.add("project-box-natours");
+    d.getElementById("js-trillo").classList.add("project-box-trillo");
+    d.getElementById("js-omnifood").classList.add("project-box-omnifood");
+    d.getElementById("js-nexter").classList.add("project-box-nexter");
+    d.getElementById("js-noticeboard").classList.add("project-box-noticeboard");
 
     // Remove dark project boxes
-    document.getElementById("js-portfolio").classList.remove("project-box-portfolio-dark");
-    document.getElementById("js-natours").classList.remove("project-box-natours-dark");
-    document.getElementById("js-trillo").classList.remove("project-box-trillo-dark");
-    document.getElementById("js-omnifood").classList.remove("project-box-omnifood-dark");
-    document.getElementById("js-nexter").classList.remove("project-box-nexter-dark");
-    document.getElementById("js-noticeboard").classList.remove("project-box-noticeboard-dark");
+    d.getElementById("js-portfolio").classList.remove("project-box-portfolio-dark");
+    d.getElementById("js-natours").classList.remove("project-box-natours-dark");
+    d.getElementById("js-trillo").classList.remove("project-box-trillo-dark");
+    d.getElementById("js-omnifood").classList.remove("project-box-omnifood-dark");
+    d.getElementById("js-nexter").classList.remove("project-box-nexter-dark");
+    d.getElementById("js-noticeboard").classList.remove("project-box-noticeboard-dark");
 
-    localStorage.setItem("theme", "light"), console.log(localStorage.getItem("dark"));
-    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+    d.documentElement.classList.remove("dark");
   } else {
-    document.documentElement.style.setProperty("--bg", "#000"),
-      document.documentElement.style.setProperty("--bg-2", "#0f0f0f"),
-      document.documentElement.style.setProperty("--text", "#fff"),
-      document.documentElement.style.setProperty("--input", "#151515"),
-      // Remove white project boxes
-      document.getElementById("js-portfolio").classList.remove("project-box-portfolio");
-    document.getElementById("js-natours").classList.remove("project-box-natours");
-    document.getElementById("js-trillo").classList.remove("project-box-trillo");
-    document.getElementById("js-omnifood").classList.remove("project-box-omnifood");
-    document.getElementById("js-nexter").classList.remove("project-box-nexter");
-    document.getElementById("js-noticeboard").classList.remove("project-box-noticeboard");
+    d.documentElement.style.setProperty("--bg", "#000");
+    d.documentElement.style.setProperty("--bg-2", "#0f0f0f");
+    d.documentElement.style.setProperty("--text", "#fff");
+    d.documentElement.style.setProperty("--input", "#151515");
+    // Remove white project boxes
+    d.getElementById("js-portfolio").classList.remove("project-box-portfolio");
+    d.getElementById("js-natours").classList.remove("project-box-natours");
+    d.getElementById("js-trillo").classList.remove("project-box-trillo");
+    d.getElementById("js-omnifood").classList.remove("project-box-omnifood");
+    d.getElementById("js-nexter").classList.remove("project-box-nexter");
+    d.getElementById("js-noticeboard").classList.remove("project-box-noticeboard");
 
     // Add dark project boxes
-    document.getElementById("js-portfolio").classList.add("project-box-portfolio-dark");
-    document.getElementById("js-natours").classList.add("project-box-natours-dark");
-    document.getElementById("js-trillo").classList.add("project-box-trillo-dark");
-    document.getElementById("js-omnifood").classList.add("project-box-omnifood-dark");
-    document.getElementById("js-nexter").classList.add("project-box-nexter-dark");
-    document.getElementById("js-noticeboard").classList.add("project-box-noticeboard-dark");
-    document.documentElement.classList.add("dark");
+    d.getElementById("js-portfolio").classList.add("project-box-portfolio-dark");
+    d.getElementById("js-natours").classList.add("project-box-natours-dark");
+    d.getElementById("js-trillo").classList.add("project-box-trillo-dark");
+    d.getElementById("js-omnifood").classList.add("project-box-omnifood-dark");
+    d.getElementById("js-nexter").classList.add("project-box-nexter-dark");
+    d.getElementById("js-noticeboard").classList.add("project-box-noticeboard-dark");
+    d.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
   }
 });
 
@@ -74,18 +89,17 @@ themeBtn.addEventListener("click", () => {
   let windowHeight;
 
   function init() {
-    elements = document.querySelectorAll(".hidden");
+    elements = d.querySelectorAll(".hidden");
     windowHeight = window.innerHeight;
   }
 
   function checkPosition() {
-    for (let i = 0; i < elements.length; i++) {
-      let element = elements[i];
-      let positionFromTop = elements[i].getBoundingClientRect().top;
+    for (const i of elements) {
+      let positionFromTop = i.getBoundingClientRect().top;
 
       if (positionFromTop - windowHeight <= -200) {
-        element.classList.add("fade-up-element");
-        element.classList.remove("hidden");
+        i.classList.add("fade-up-element");
+        i.classList.remove("hidden");
       }
     }
   }
@@ -103,18 +117,17 @@ themeBtn.addEventListener("click", () => {
   let windowHeight;
 
   function init() {
-    elements = document.querySelectorAll(".hidden-fade");
+    elements = d.querySelectorAll(".hidden-fade");
     windowHeight = window.innerHeight;
   }
 
   function checkPosition() {
-    for (let i = 0; i < elements.length; i++) {
-      let element = elements[i];
-      let positionFromTop = elements[i].getBoundingClientRect().top;
+    for (const i of elements) {
+      let positionFromTop = i.getBoundingClientRect().top;
 
       if (positionFromTop - windowHeight <= -200) {
-        element.classList.add("fade-in");
-        element.classList.remove("hidden-fade");
+        i.classList.add("fade-in");
+        i.classList.remove("hidden-fade");
       }
     }
   }
@@ -132,18 +145,17 @@ themeBtn.addEventListener("click", () => {
   let windowHeight;
 
   function init() {
-    elements = document.querySelectorAll(".hidden-fade-left");
+    elements = d.querySelectorAll(".hidden-fade-left");
     windowHeight = window.innerHeight;
   }
 
   function checkPosition() {
-    for (let i = 0; i < elements.length; i++) {
-      let element = elements[i];
-      let positionFromTop = elements[i].getBoundingClientRect().top;
+    for (const i of elements) {
+      let positionFromTop = i.getBoundingClientRect().top;
 
       if (positionFromTop - windowHeight <= -200) {
-        element.classList.add("fade-left");
-        element.classList.remove("hidden-fade-left");
+        i.classList.add("fade-left");
+        i.classList.remove("hidden-fade-left");
       }
     }
   }
@@ -161,18 +173,17 @@ themeBtn.addEventListener("click", () => {
   let windowHeight;
 
   function init() {
-    elements = document.querySelectorAll(".hidden-fade-right");
+    elements = d.querySelectorAll(".hidden-fade-right");
     windowHeight = window.innerHeight;
   }
 
   function checkPosition() {
-    for (let i = 0; i < elements.length; i++) {
-      let element = elements[i];
-      let positionFromTop = elements[i].getBoundingClientRect().top;
+    for (const i of elements) {
+      let positionFromTop = i.getBoundingClientRect().top;
 
       if (positionFromTop - windowHeight <= -200) {
-        element.classList.add("fade-right");
-        element.classList.remove("hidden-fade-right");
+        i.classList.add("fade-right");
+        i.classList.remove("hidden-fade-right");
       }
     }
   }
@@ -190,18 +201,17 @@ themeBtn.addEventListener("click", () => {
   let windowHeight;
 
   function init() {
-    elements = document.querySelectorAll(".hidden-extend");
+    elements = d.querySelectorAll(".hidden-extend");
     windowHeight = window.innerHeight;
   }
 
   function checkPosition() {
-    for (let i = 0; i < elements.length; i++) {
-      let element = elements[i];
-      let positionFromTop = elements[i].getBoundingClientRect().top;
+    for (const i of elements) {
+      let positionFromTop = i.getBoundingClientRect().top;
 
       if (positionFromTop - windowHeight <= -200) {
-        element.classList.add("extend");
-        element.classList.remove("hidden-extend");
+        i.classList.add("extend");
+        i.classList.remove("hidden-extend");
       }
     }
   }
@@ -220,18 +230,17 @@ themeBtn.addEventListener("click", () => {
   let windowHeight;
 
   function init() {
-    elements = document.querySelectorAll(".hidden-bg-1");
+    elements = d.querySelectorAll(".hidden-bg-1");
     windowHeight = window.innerHeight;
   }
 
   function checkPosition() {
-    for (let i = 0; i < elements.length; i++) {
-      let element = elements[i];
-      let positionFromTop = elements[i].getBoundingClientRect().top;
+    for (const i of elements) {
+      let positionFromTop = i.getBoundingClientRect().top;
 
       if (positionFromTop - windowHeight <= -200) {
-        element.classList.add("bg-left");
-        element.classList.remove("hidden-bg-1");
+        i.classList.add("bg-left");
+        i.classList.remove("hidden-bg-1");
       }
     }
   }
@@ -249,18 +258,17 @@ themeBtn.addEventListener("click", () => {
   let windowHeight;
 
   function init() {
-    elements = document.querySelectorAll(".hidden-bg-2");
+    elements = d.querySelectorAll(".hidden-bg-2");
     windowHeight = window.innerHeight;
   }
 
   function checkPosition() {
-    for (let i = 0; i < elements.length; i++) {
-      let element = elements[i];
-      let positionFromTop = elements[i].getBoundingClientRect().top;
+    for (const i of elements) {
+      let positionFromTop = i.getBoundingClientRect().top;
 
       if (positionFromTop - windowHeight <= -200) {
-        element.classList.add("bg-right");
-        element.classList.remove("hidden-bg-2");
+        i.classList.add("bg-right");
+        i.classList.remove("hidden-bg-2");
       }
     }
   }

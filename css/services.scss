@@ -108,25 +108,3 @@ section {
     display: none;
   }
 }
-
-.services {
-  &-1 {
-    transform: translateX(25px);
-    opacity: 0;
-  }
-
-  &-2 {
-    transform: translateX(-25px);
-    opacity: 0;
-  }
-
-  &-3 {
-    transform: translateX(25px);
-    opacity: 0;
-  }
-
-  &-4 {
-    transform: translateX(-25px);
-    opacity: 0;
-  }
-}
