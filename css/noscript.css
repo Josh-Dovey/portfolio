@@ -1302,7 +1302,7 @@ section {
 @media only screen and (max-width: 37.5em) {
   .contact-availability {
     width: unset;
-    maring: 0;
+    margin: 0;
     text-align: center;
     position: relative;
   }

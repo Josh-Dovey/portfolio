@@ -1,27 +1,73 @@
 const d = document;
 
-// Set theme depending on local storage
-if (localStorage.getItem("theme") === "dark") {
+const portfolio = d.getElementById("js-portfolio");
+const natours = d.getElementById("js-natours");
+const trillo = d.getElementById("js-trillo");
+const omnifood = d.getElementById("js-omnifood");
+const nexter = d.getElementById("js-nexter");
+const noticeboard = d.getElementById("js-noticeboard");
+
+const setDarkTheme = () => {
   d.documentElement.style.setProperty("--bg", "#000");
   d.documentElement.style.setProperty("--bg-2", "#0f0f0f");
   d.documentElement.style.setProperty("--text", "#fff");
   d.documentElement.style.setProperty("--input", "#151515");
   // Remove white project boxes
-  d.getElementById("js-portfolio").classList.remove("project-box-portfolio");
-  d.getElementById("js-natours").classList.remove("project-box-natours");
-  d.getElementById("js-trillo").classList.remove("project-box-trillo");
-  d.getElementById("js-omnifood").classList.remove("project-box-omnifood");
-  d.getElementById("js-nexter").classList.remove("project-box-nexter");
-  d.getElementById("js-noticeboard").classList.remove("project-box-noticeboard");
+  portfolio.classList.remove("project-box-portfolio");
+  natours.classList.remove("project-box-natours");
+  trillo.classList.remove("project-box-trillo");
+  omnifood.classList.remove("project-box-omnifood");
+  nexter.classList.remove("project-box-nexter");
+  noticeboard.classList.remove("project-box-noticeboard");
 
   // Add dark project boxes
-  d.getElementById("js-portfolio").classList.add("project-box-portfolio-dark");
-  d.getElementById("js-natours").classList.add("project-box-natours-dark");
-  d.getElementById("js-trillo").classList.add("project-box-trillo-dark");
-  d.getElementById("js-omnifood").classList.add("project-box-omnifood-dark");
-  d.getElementById("js-nexter").classList.add("project-box-nexter-dark");
-  d.getElementById("js-noticeboard").classList.add("project-box-noticeboard-dark");
+  portfolio.classList.add("project-box-portfolio-dark");
+  natours.classList.add("project-box-natours-dark");
+  trillo.classList.add("project-box-trillo-dark");
+  omnifood.classList.add("project-box-omnifood-dark");
+  nexter.classList.add("project-box-nexter-dark");
+  noticeboard.classList.add("project-box-noticeboard-dark");
   d.documentElement.classList.add("dark");
+  localStorage.setItem("theme", "dark");
+};
+
+const setLightTheme = () => {
+  d.documentElement.style.setProperty("--bg", "#fff");
+  d.documentElement.style.setProperty("--bg-2", "#fff");
+  d.documentElement.style.setProperty("--text", "#000");
+  d.documentElement.style.setProperty("--input", "#fff");
+  // Add white project boxes
+  portfolio.classList.add("project-box-portfolio");
+  natours.classList.add("project-box-natours");
+  trillo.classList.add("project-box-trillo");
+  omnifood.classList.add("project-box-omnifood");
+  nexter.classList.add("project-box-nexter");
+  noticeboard.classList.add("project-box-noticeboard");
+
+  // Remove dark project boxes
+  portfolio.classList.remove("project-box-portfolio-dark");
+  natours.classList.remove("project-box-natours-dark");
+  trillo.classList.remove("project-box-trillo-dark");
+  omnifood.classList.remove("project-box-omnifood-dark");
+  nexter.classList.remove("project-box-nexter-dark");
+  noticeboard.classList.remove("project-box-noticeboard-dark");
+
+  localStorage.setItem("theme", "light");
+  d.documentElement.classList.remove("dark");
+};
+
+// Set theme depending on local storage
+if (
+  localStorage.getItem("theme") === "dark" ||
+  (window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches &&
+    localStorage.getItem("theme") !== "light")
+) {
+  setDarkTheme();
+}
+
+if (localStorage.getItem("theme") === "light") {
+  setLightTheme();
 }
 
 const waypoint = window.screen.availHeight,
@@ -37,50 +83,9 @@ const waypoint = window.screen.availHeight,
 const themeBtn = d.getElementById("js-theme-switch");
 themeBtn.addEventListener("click", () => {
   if (d.documentElement.classList.contains("dark")) {
-    d.documentElement.style.setProperty("--bg", "#fff");
-    d.documentElement.style.setProperty("--bg-2", "#fff");
-    d.documentElement.style.setProperty("--text", "#000");
-    d.documentElement.style.setProperty("--input", "#fff");
-    // Add white project boxes
-    d.getElementById("js-portfolio").classList.add("project-box-portfolio");
-    d.getElementById("js-natours").classList.add("project-box-natours");
-    d.getElementById("js-trillo").classList.add("project-box-trillo");
-    d.getElementById("js-omnifood").classList.add("project-box-omnifood");
-    d.getElementById("js-nexter").classList.add("project-box-nexter");
-    d.getElementById("js-noticeboard").classList.add("project-box-noticeboard");
-
-    // Remove dark project boxes
-    d.getElementById("js-portfolio").classList.remove("project-box-portfolio-dark");
-    d.getElementById("js-natours").classList.remove("project-box-natours-dark");
-    d.getElementById("js-trillo").classList.remove("project-box-trillo-dark");
-    d.getElementById("js-omnifood").classList.remove("project-box-omnifood-dark");
-    d.getElementById("js-nexter").classList.remove("project-box-nexter-dark");
-    d.getElementById("js-noticeboard").classList.remove("project-box-noticeboard-dark");
-
-    localStorage.setItem("theme", "light");
-    d.documentElement.classList.remove("dark");
+    setLightTheme();
   } else {
-    d.documentElement.style.setProperty("--bg", "#000");
-    d.documentElement.style.setProperty("--bg-2", "#0f0f0f");
-    d.documentElement.style.setProperty("--text", "#fff");
-    d.documentElement.style.setProperty("--input", "#151515");
-    // Remove white project boxes
-    d.getElementById("js-portfolio").classList.remove("project-box-portfolio");
-    d.getElementById("js-natours").classList.remove("project-box-natours");
-    d.getElementById("js-trillo").classList.remove("project-box-trillo");
-    d.getElementById("js-omnifood").classList.remove("project-box-omnifood");
-    d.getElementById("js-nexter").classList.remove("project-box-nexter");
-    d.getElementById("js-noticeboard").classList.remove("project-box-noticeboard");
-
-    // Add dark project boxes
-    d.getElementById("js-portfolio").classList.add("project-box-portfolio-dark");
-    d.getElementById("js-natours").classList.add("project-box-natours-dark");
-    d.getElementById("js-trillo").classList.add("project-box-trillo-dark");
-    d.getElementById("js-omnifood").classList.add("project-box-omnifood-dark");
-    d.getElementById("js-nexter").classList.add("project-box-nexter-dark");
-    d.getElementById("js-noticeboard").classList.add("project-box-noticeboard-dark");
-    d.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
+    setDarkTheme();
   }
 });
 
