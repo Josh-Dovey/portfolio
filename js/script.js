@@ -5,7 +5,7 @@ const natours = d.getElementById("js-natours");
 const trillo = d.getElementById("js-trillo");
 const omnifood = d.getElementById("js-omnifood");
 const nexter = d.getElementById("js-nexter");
-const noticeboard = d.getElementById("js-noticeboard");
+const qrcoder = d.getElementById("js-qrcoder");
 
 const setDarkTheme = () => {
   d.documentElement.style.setProperty("--bg", "#000");
@@ -18,7 +18,7 @@ const setDarkTheme = () => {
   trillo.classList.remove("project-box-trillo");
   omnifood.classList.remove("project-box-omnifood");
   nexter.classList.remove("project-box-nexter");
-  noticeboard.classList.remove("project-box-noticeboard");
+  qrcoder.classList.remove("project-box-qrcoder");
 
   // Add dark project boxes
   portfolio.classList.add("project-box-portfolio-dark");
@@ -26,7 +26,7 @@ const setDarkTheme = () => {
   trillo.classList.add("project-box-trillo-dark");
   omnifood.classList.add("project-box-omnifood-dark");
   nexter.classList.add("project-box-nexter-dark");
-  noticeboard.classList.add("project-box-noticeboard-dark");
+  qrcoder.classList.add("project-box-qrcoder-dark");
   d.documentElement.classList.add("dark");
   localStorage.setItem("theme", "dark");
 };
@@ -42,7 +42,7 @@ const setLightTheme = () => {
   trillo.classList.add("project-box-trillo");
   omnifood.classList.add("project-box-omnifood");
   nexter.classList.add("project-box-nexter");
-  noticeboard.classList.add("project-box-noticeboard");
+  qrcoder.classList.add("project-box-qrcoder");
 
   // Remove dark project boxes
   portfolio.classList.remove("project-box-portfolio-dark");
@@ -50,7 +50,7 @@ const setLightTheme = () => {
   trillo.classList.remove("project-box-trillo-dark");
   omnifood.classList.remove("project-box-omnifood-dark");
   nexter.classList.remove("project-box-nexter-dark");
-  noticeboard.classList.remove("project-box-noticeboard-dark");
+  qrcoder.classList.remove("project-box-qrcoder-dark");
 
   localStorage.setItem("theme", "light");
   d.documentElement.classList.remove("dark");

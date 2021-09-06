@@ -309,9 +309,9 @@
     }
   }
 
-  &-noticeboard {
-    background-color: #1771ff;
-    background-image: url("../assets/webp/noticeboard-clay@1x.webp");
+  &-qrcoder {
+    background-color: #006bff;
+    background-image: url("../assets/webp/qrcoder-clay@1x.webp");
     background-position: 100% 70%;
     background-size: 105%;
 
@@ -321,7 +321,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/webp/noticeboard-clay@2x.webp");
+      background-image: url("../assets/webp/qrcoder-clay@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -330,7 +330,7 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/webp/noticeboard-clay@3x.webp");
+      background-image: url("../assets/webp/qrcoder-clay@3x.webp");
     }
   }
 
@@ -462,9 +462,9 @@
     }
   }
 
-  &-noticeboard-dark {
-    background-color: #1771ff;
-    background-image: url("../assets/webp/noticeboard-clay-dark@1x.webp");
+  &-qrcoder-dark {
+    background-color: #006bff;
+    background-image: url("../assets/webp/qrcoder-clay-dark@1x.webp");
     background-position: 100% 70%;
     background-size: 95%;
 
@@ -474,7 +474,7 @@
       only screen and (min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi),
       only screen and (min-resolution: 2dppx) {
-      background-image: url("../assets/webp/noticeboard-clay-dark@2x.webp");
+      background-image: url("../assets/webp/qrcoder-clay-dark@2x.webp");
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3),
@@ -483,7 +483,7 @@
       only screen and (min-device-pixel-ratio: 3),
       only screen and (min-resolution: 288dpi),
       only screen and (min-resolution: 3dppx) {
-      background-image: url("../assets/webp/noticeboard-clay-dark@3x.webp");
+      background-image: url("../assets/webp/qrcoder-clay-dark@3x.webp");
     }
   }
 }

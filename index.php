@@ -29,7 +29,6 @@
     <meta name="theme-color" content="#ffffff" />
     <meta property="og:image" content="./assets/favicon/favicon-32x32.png" />
     <link rel="canonical" href="https://joshdovey.com" />
-    <!-- <link rel="preload" as="script" href="/js/bundle.js" /> -->
   </head>
   <body>
     <div class="nav-bg" id="nav-box">
@@ -236,14 +235,14 @@
           </a>
 
           <a
-            href="https://kidderminster-kh-notice-board.herokuapp.com/home"
+            href="https://coder-qr.herokuapp.com/home"
             target="_blank"
             rel="noopener"
-            class="project-box project-box-noticeboard hidden-fade"
-            id="js-noticeboard"
+            class="project-box project-box-qrcoder hidden-fade"
+            id="js-qrcoder"
           >
-            <h3 class="project-name">Notice Board</h3>
-            <h4>Secure React & Node PWA</h4>
+            <h3 class="project-name">QR Coder</h3>
+            <h4>Secure Node JS PWA</h4>
           </a>
         </div>
       </div>
@@ -328,7 +327,7 @@
         </div>
       </div>
     </footer>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/bundle.js" defer></script>
     <noscript class="noscript-advisory">Please enable Javascript for a better experience</noscript>
   </body>
 </html>
